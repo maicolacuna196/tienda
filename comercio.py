@@ -298,7 +298,7 @@ class Tienda:
             Ingrese Z para eliminar un vendedor
             Ingrese E para registrar una venta
             Ingrese V para imprimir la lista de ventas
-            Ingrese Q para salir
+            Ingrese Q para salirA
             '''
             
             operacion = input(instrucciones).strip().upper()
