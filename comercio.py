@@ -1,9 +1,10 @@
 from producto import Producto
 from vendedor import Vendedor
+from venta import Venta
 from vendedor_dao import VendedorDAO
 from producto_dao import ProductoDAO
+from ventas_dao import VentaDAO
 from logger_base import log
-from venta import Venta
 
 class Tienda:
     def __init__(self, nombre_negocio, direccion, telefono, sitio_web):
@@ -60,6 +61,14 @@ class Tienda:
     def imprimir_productos(self, lista_productos):
         for producto in lista_productos:
             log.info(producto)
+
+    def eliminar_venta(self, id_venta):
+        venta = Venta(id_venta= id_venta)
+        ventas_eliminadas = VentaDAO.eliminar(venta)
+        if ventas_eliminadas > 0:
+            log.info(f'Ventas eliminados: {ventas_eliminadas}')
+        else:
+            log.warning(f'No se encontraron ventas para el ID: {id_venta}')
 
     def eliminar_producto(self, id_producto):
         producto = Producto(id_producto=id_producto)
@@ -135,14 +144,19 @@ class Tienda:
                 self.agregar_venta_temporal(nueva_venta_temporal)
 
                 # Crear una nueva venta acumulada
-                nueva_venta_acumulado = Venta(
-                    id_producto=validar_producto.id_producto,
-                    nombre_producto=nombre_producto,
-                    precio_producto=validar_producto.precio_producto * cantidad,  # Esta línea refleja el valor total de la venta
-                    cantidad_producto=cantidad
+                nueva_venta_acumulado = Venta( 
+                        id_producto= validar_producto.id_producto,
+                        nombre_producto=nombre_producto,
+                        precio_producto=validar_producto.precio_producto* cantidad,
+                        cantidad_producto=cantidad
                 )
+                
+
                 # Agregar la venta acumulada a la lista
+                venta_insertada = VentaDAO.insertar(nueva_venta_acumulado)
+                log.info(f'Ventas insertadas: {venta_insertada}')
                 self.agregar_venta_acumulado(nueva_venta_acumulado)
+                
 
                 # Actualizar la cantidad restante de unidades en la base de datos
                 producto_actualizado = Producto(
@@ -272,17 +286,17 @@ class Tienda:
             else:
                 print('Opción no válida. Introduce una opción válida.')
 
-    def imprimir_ventas(self):
+    def imprimir_ventas(self, lista):
         # Inicializar la suma total
         suma_total = 0
 
         # Iterar sobre las ventas e imprimir cada una
-        for venta in self._lista_ventas:
-            suma_total += venta.precio_producto
+        for venta in lista:
+#           suma_total += venta.precio_producto
             print(venta)
 
         # Imprimir la suma total
-        print(f'Total de ventas acumuladas: {suma_total}')
+ #       print(f'Total de ventas acumuladas: {suma_total}')
 
     def menu_interactivo(self):
         while True:
@@ -295,6 +309,7 @@ class Tienda:
             Ingrese Z para eliminar un vendedor
             Ingrese E para registrar una venta
             Ingrese V para imprimir la lista de ventas
+            Ingrese O para eliminar una venta
             Ingrese Q para salir
             '''
             
@@ -320,7 +335,11 @@ class Tienda:
                 elif operacion == 'E':
                     self.validar_venta()
                 elif operacion == 'V':
-                    self.imprimir_ventas()
+                    ventas = VentaDAO.seleccionar()
+                    self.imprimir_ventas(ventas)
+                elif operacion == 'O':
+                    id_venta = int(input('Ingrese el ID de la venta que desea eliminar: '))
+                    self.eliminar_venta(id_venta)
                 elif operacion == 'Q':
                     break
                 else:
