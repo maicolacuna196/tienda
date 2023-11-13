@@ -3,6 +3,7 @@ from vendedor import Vendedor
 from vendedor_dao import VendedorDAO
 from producto_dao import ProductoDAO
 from logger_base import log
+from venta import Venta
 
 class Tienda:
     def __init__(self, nombre_negocio, direccion, telefono, sitio_web):
@@ -13,8 +14,7 @@ class Tienda:
         self._lista_vendedores = []
         self._lista_productos = []
         self._lista_ventas = []
-        self._lista_total = []
-        self._lista_actualizada = []
+        self._lista_temporal = []
 
     def __str__(self):
         return f'''
@@ -101,9 +101,12 @@ class Tienda:
         else:
             return None
         
-    def agregar_venta(self, venta):
+    def agregar_venta_temporal(self, venta):
+        self._lista_temporal.append(venta)
+
+    def agregar_venta_acumulado(self, venta):
         self._lista_ventas.append(venta)
-        self._lista_total.append(venta)
+
 
     def actualizar_inventario(self, producto, cantidad):
         if producto.cantidad_producto >= cantidad:
@@ -114,26 +117,64 @@ class Tienda:
     
     def registrar_venta(self, nombre_producto, validar_producto):
         try:
-            cantidad = int(input('Ingrese la cantidad del producto a comprar: '))
-            if cantidad <= 0:
-                print('La cantidad debe ser un número entero positivo.')
-                return 0
+            # Obtener la cantidad del usuario
+            cantidad = self.obtener_cantidad()
+            # Validar que la cantidad sea un número entero positivo
+            self.validar_cantidad(cantidad)
 
+            # Actualizar el inventario si hay suficientes productos disponibles
             if self.actualizar_inventario(validar_producto, cantidad):
-                nueva_venta = Producto(id_producto=validar_producto.id_producto, nombre_producto=nombre_producto, precio_producto=validar_producto.precio_producto, cantidad_producto=cantidad)
-                self.agregar_venta(nueva_venta)
-                producto = Producto(id_producto=validar_producto.id_producto, cantidad_producto=validar_producto.cantidad_producto)
-                producto_actualizado = ProductoDAO.actualizar(producto)
-                log.info(f'Producto actualizado: {producto}')
-                self._lista_actualizada.append(producto)
+                # Crear una nueva venta temporal
+                nueva_venta_temporal = Producto(
+                    id_producto=validar_producto.id_producto,
+                    nombre_producto=nombre_producto,
+                    precio_producto=validar_producto.precio_producto,
+                    cantidad_producto=cantidad
+                )
+                # Agregar la venta temporal a la lista
+                self.agregar_venta_temporal(nueva_venta_temporal)
+
+                # Crear una nueva venta acumulada
+                nueva_venta_acumulado = Venta(
+                    id_producto=validar_producto.id_producto,
+                    nombre_producto=nombre_producto,
+                    precio_producto=validar_producto.precio_producto * cantidad,  # Esta línea refleja el valor total de la venta
+                    cantidad_producto=cantidad
+                )
+                # Agregar la venta acumulada a la lista
+                self.agregar_venta_acumulado(nueva_venta_acumulado)
+
+                # Actualizar la cantidad restante de unidades en la base de datos
+                producto_actualizado = Producto(
+                    id_producto=validar_producto.id_producto,
+                    cantidad_producto=validar_producto.cantidad_producto
+                )
+                ProductoDAO.actualizar(producto_actualizado)
+                log.info(f'Producto actualizado: {producto_actualizado}')
+
+                # Calcular el valor total de la venta
                 valor_total = cantidad * validar_producto.precio_producto
                 return valor_total
             else:
+                # Mensaje si la cantidad requerida supera la cantidad disponible
                 print('La cantidad requerida supera la cantidad disponible.')
                 return 0
         except ValueError as e:
-            print(f'Error: La cantidad debe ser un número entero válido. Sin letras. {e}')
+            # Manejar errores relacionados con la entrada del usuario
+            print(f'Error: {e}')
             return 0
+        
+    def obtener_cantidad(self):
+        try:
+            cantidad = int(input('Ingrese la cantidad del producto a comprar: '))
+            return cantidad
+        except ValueError:
+            raise ValueError('La cantidad debe ser un número entero válido.')
+
+    def validar_cantidad(self, cantidad):
+        if cantidad <= 0:
+            raise ValueError('La cantidad debe ser un número entero positivo.')
+
 
     def imprimir_factura(self, validar_vendedor):
         nombre_comercial = self._nombre_negocio.center(len(self._nombre_negocio) + 30, '-')
@@ -144,7 +185,7 @@ class Tienda:
         print('CANT. DESCRIPCIÓN')
         subtotal = 0
         total = 0
-        for venta in self._lista_total:
+        for venta in self._lista_temporal:
             total_venta = venta.precio_producto * venta.cantidad_producto
             print(f"{venta.cantidad_producto} {venta.nombre_producto.ljust(len(venta.nombre_producto) + 20, '-')} {total_venta}")
             subtotal += total_venta
@@ -226,10 +267,25 @@ class Tienda:
                     total_venta = self.registrar_venta(nombre_producto, validar_producto)
             elif operacion_venta == '3':
                 self.agregar_total(total_venta, validar_vendedor)
-                self._lista_total.clear()
+                self._lista_temporal.clear()
                 break
             else:
                 print('Opción no válida. Introduce una opción válida.')
+
+    def imprimir_ventas(self):
+        # Inicializar la suma total
+        suma_total = 0
+
+        # Iterar sobre las ventas e imprimir cada una
+        for venta in self._lista_ventas:
+            suma_total += venta.precio_producto
+            print(venta)
+
+        # Imprimir la suma total
+        print(f'Total de ventas acumuladas: {suma_total}')
+
+
+
 
     def menu_interactivo(self):
         while True:
@@ -242,7 +298,7 @@ class Tienda:
             Ingrese Z para eliminar un vendedor
             Ingrese E para registrar una venta
             Ingrese V para imprimir la lista de ventas
-            Ingrese Q para salir
+            Ingrese Q para salirA
             '''
             
             operacion = input(instrucciones).strip().upper()
