@@ -5,11 +5,7 @@ class Venta:
         self._producto_vendido = producto_vendido
         self._valor_producto = valor_producto
         self._cantidad_vendida = cantidad_vendida
-
-
-
-    
-    
+        
     def __str__(self):
         return f'''
                 ID producto: {self._id_producto} | Nombre producto: {self._producto_vendido}
