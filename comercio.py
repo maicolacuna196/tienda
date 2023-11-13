@@ -284,9 +284,6 @@ class Tienda:
         # Imprimir la suma total
         print(f'Total de ventas acumuladas: {suma_total}')
 
-
-
-
     def menu_interactivo(self):
         while True:
             instrucciones = '''
@@ -298,7 +295,7 @@ class Tienda:
             Ingrese Z para eliminar un vendedor
             Ingrese E para registrar una venta
             Ingrese V para imprimir la lista de ventas
-            Ingrese Q para salirA
+            Ingrese Q para salir
             '''
             
             operacion = input(instrucciones).strip().upper()
