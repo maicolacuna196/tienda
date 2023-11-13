@@ -8,7 +8,7 @@ class Venta(Producto):
     def __str__(self):
         return f'''
                 ID producto: {self._id_producto} | Nombre producto: {self._nombre_producto}
-                Venta total: ${self._precio_producto} | Cantidad vendida: {self._cantidad_producto}
+                Venta total: ${self._precio_producto} | Cantidad vendida1: {self._cantidad_producto}
                 '''        
 
 
