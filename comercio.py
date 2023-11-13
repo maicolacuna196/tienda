@@ -4,6 +4,7 @@ from vendedor_dao import VendedorDAO
 from producto_dao import ProductoDAO
 from logger_base import log
 from venta import Venta
+from venta_dao import VentaDAO
 
 class Tienda:
     def __init__(self, nombre_negocio, direccion, telefono, sitio_web):
@@ -275,17 +276,13 @@ class Tienda:
     def imprimir_ventas(self):
         # Inicializar la suma total
         suma_total = 0
-
         # Iterar sobre las ventas e imprimir cada una
         for venta in self._lista_ventas:
             suma_total += venta.precio_producto
-            print(venta)
+            log.info(venta)
 
         # Imprimir la suma total
-        print(f'Total de ventas acumuladas: {suma_total}')
-
-
-
+        log.info(f'Total de ventas acumuladas: ${suma_total}')
 
     def menu_interactivo(self):
         while True:
@@ -323,7 +320,8 @@ class Tienda:
                 elif operacion == 'E':
                     self.validar_venta()
                 elif operacion == 'V':
-                    self.imprimir_ventas()
+                    ventas = VentaDAO.seleccionar()
+                    #self.imprimir_ventas()
                 elif operacion == 'Q':
                     break
                 else:
