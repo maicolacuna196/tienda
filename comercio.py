@@ -1,8 +1,8 @@
 from producto import Producto
 from vendedor import Vendedor
 from venta import Venta
-from vendedor_dao import VendedorDAO
 from producto_dao import ProductoDAO
+from vendedor_dao import VendedorDAO
 from ventas_dao import VentaDAO
 from logger_base import log
 
@@ -58,10 +58,29 @@ class Tienda:
     def agregar_producto(self, producto):
         self._lista_productos.append(producto)
 
-    def imprimir_productos(self, lista_productos):
-        for producto in lista_productos:
-            log.info(producto)
+    def agregar_vendedor(self, vendedor):
+        self._lista_vendedores.append(vendedor)
+    
+    def agregar_venta_temporal(self, venta):
+        self._lista_temporal.append(venta)
 
+    def agregar_venta_acumulado(self, venta):
+        self._lista_ventas.append(venta)
+
+    def agregar_total(self, total, validar_vendedor):
+        validar_vendedor.suma_vendedor += total  
+        print(validar_vendedor.suma_vendedor)
+        vendedor = Vendedor(id_vendedor=validar_vendedor.id_vendedor, suma_vendedor=validar_vendedor.suma_vendedor)
+        vendedor_actualizado = VendedorDAO.actualizar(vendedor)
+        log.info(f'Vendedores actualizados: {vendedor_actualizado}')
+
+    def actualizar_inventario(self, producto, cantidad):
+        if producto.cantidad_producto >= cantidad:
+            producto.cantidad_producto -= cantidad
+            return True
+        else:
+            return False
+        
     def eliminar_venta(self, id_venta):
         venta = Venta(id_venta= id_venta)
         ventas_eliminadas = VentaDAO.eliminar(venta)
@@ -78,13 +97,6 @@ class Tienda:
         else:
             log.warning(f'No se encontraron productos para el ID: {id_producto}')
 
-    def agregar_vendedor(self, vendedor):
-        self._lista_vendedores.append(vendedor)
-
-    def imprimir_vendedores(self, lista_vendedores):
-        for vendedor in lista_vendedores:
-            log.info(vendedor)
-
     def eliminar_vendedor(self, id_vendedor):
         vendedor = Vendedor(id_vendedor=id_vendedor)
         vendedores_eliminados = VendedorDAO.eliminar(vendedor)
@@ -92,37 +104,103 @@ class Tienda:
             log.info(f'Vendedores eliminados: {vendedores_eliminados}')
         else:
             log.warning(f'No se encontraron vendedores para el ID: {id_vendedor}')
+    
+    def imprimir_productos(self, lista_productos):
+        for producto in lista_productos:
+            log.info(producto)
 
-    def validar_producto(self, nombre_producto):
-        # Validar si un vendedor existe en la lista de vendedores
-        # for producto in self._lista_productos:
-        for producto in ProductoDAO._productos:
-            if producto.nombre_producto == nombre_producto:
-                return producto
-        else:
-            return None
+    def imprimir_vendedores(self, lista_vendedores):
+        for vendedor in lista_vendedores:
+            log.info(vendedor)
 
-    def validar_vendedor(self, documento_vendedor):
-        # Validar si un vendedor existe en la lista de vendedores
-        for vendedor in VendedorDAO._vendedores:
-            if vendedor.documento_vendedor == documento_vendedor:
-                return vendedor
-        else:
-            return None
+    def imprimir_ventas(self, lista):
+        # Inicializar la suma total
+        suma_total = 0
+
+        # Iterar sobre las ventas e imprimir cada una
+        for venta in lista:
+            suma_total += venta.precio_producto
+            log.info(venta)
+
+    def imprimir_factura(self, validar_vendedor):
+        nombre_comercial = self._nombre_negocio.center(len(self._nombre_negocio) + 30, '-')
+        print(nombre_comercial)
+        print(f'Cajero: {validar_vendedor._nombre_vendedor}')
+        tipo_alimento = 'ALIMENTOS'
+        print(tipo_alimento.ljust(len(tipo_alimento) + 20, '*'))
+        print('CANT. DESCRIPCIÓN')
+        subtotal = 0
+        total = 0
+        for venta in self._lista_temporal:
+            total_venta = venta.precio_producto * venta.cantidad_producto
+            print(f"{venta.cantidad_producto} {venta.nombre_producto.ljust(len(venta.nombre_producto) + 20, '-')} {total_venta}")
+            subtotal += total_venta
+            total = subtotal + (subtotal * 0.19)
+        print(f'SUBTOTAL: {subtotal}')
+        print(f'IVA 19%: {subtotal * 0.19}')
+        print(f'TOTAL: {total}')
+        return total
+
+
+        # Imprimir la suma total
+        print(f'Total de ventas acumuladas: ${suma_total}')
         
-    def agregar_venta_temporal(self, venta):
-        self._lista_temporal.append(venta)
+    def menu_interactivo(self):
+        while True:
+            instrucciones = '''
+            Ingrese A para registrar un nuevo producto
+            Ingrese B para imprimir la lista de productos
+            Ingrese X para eliminar un producto
+            Ingrese C para registrar un vendedor
+            Ingrese D para imprimir la lista de vendedores
+            Ingrese Z para eliminar un vendedor
+            Ingrese E para registrar una venta
+            Ingrese V para imprimir la lista de ventas
+            Ingrese O para eliminar una venta
+            Ingrese Q para salir
+            '''
+            
+            operacion = input(instrucciones).strip().upper()
 
-    def agregar_venta_acumulado(self, venta):
-        self._lista_ventas.append(venta)
+            try:
+                if operacion == 'A':
+                    self.registro_producto()
+                elif operacion == 'B':
+                    productos = ProductoDAO.seleccionar()
+                    self.imprimir_productos(productos)
+                elif operacion == 'X':
+                    id_producto = int(input('Ingrese el ID del producto que desea eliminar: '))
+                    self.eliminar_producto(id_producto)
+                elif operacion == 'C':
+                    self.registrar_vendedor()
+                elif operacion == 'D':
+                    vendedores = VendedorDAO.seleccionar()
+                    self.imprimir_vendedores(vendedores)
+                elif operacion == 'Z':
+                    id_vendedor = int(input('Ingrese el ID del vendedor que desea eliminar: '))
+                    self.eliminar_vendedor(id_vendedor)
+                elif operacion == 'E':
+                    self.validar_venta()
+                elif operacion == 'V':
+                    ventas = VentaDAO.seleccionar()
+                    self.imprimir_ventas(ventas)
+                elif operacion == 'O':
+                    id_venta = int(input('Ingrese el ID de la venta que desea eliminar: '))
+                    self.eliminar_venta(id_venta)
+                elif operacion == 'Q':
+                    break
+                else:
+                    print('Opción no válida. Introduce una opción válida')
+            except Exception as e:
+                print(f'Error inesperado: {e}')
 
+    def obtener_cantidad(self):
+        try:
+            cantidad = int(input('Ingrese la cantidad del producto a comprar: '))
+            return cantidad
+        except ValueError:
+            raise ValueError('La cantidad debe ser un número entero válido.')
 
-    def actualizar_inventario(self, producto, cantidad):
-        if producto.cantidad_producto >= cantidad:
-            producto.cantidad_producto -= cantidad
-            return True
-        else:
-            return False
     
     def registrar_venta(self, nombre_producto, validar_producto):
         try:
@@ -178,44 +256,6 @@ class Tienda:
             print(f'Error: {e}')
             return 0
         
-    def obtener_cantidad(self):
-        try:
-            cantidad = int(input('Ingrese la cantidad del producto a comprar: '))
-            return cantidad
-        except ValueError:
-            raise ValueError('La cantidad debe ser un número entero válido.')
-
-    def validar_cantidad(self, cantidad):
-        if cantidad <= 0:
-            raise ValueError('La cantidad debe ser un número entero positivo.')
-
-
-    def imprimir_factura(self, validar_vendedor):
-        nombre_comercial = self._nombre_negocio.center(len(self._nombre_negocio) + 30, '-')
-        print(nombre_comercial)
-        print(f'Cajero: {validar_vendedor._nombre_vendedor}')
-        tipo_alimento = 'ALIMENTOS'
-        print(tipo_alimento.ljust(len(tipo_alimento) + 20, '*'))
-        print('CANT. DESCRIPCIÓN')
-        subtotal = 0
-        total = 0
-        for venta in self._lista_temporal:
-            total_venta = venta.precio_producto * venta.cantidad_producto
-            print(f"{venta.cantidad_producto} {venta.nombre_producto.ljust(len(venta.nombre_producto) + 20, '-')} {total_venta}")
-            subtotal += total_venta
-            total = subtotal + (subtotal * 0.19)
-        print(f'SUBTOTAL: {subtotal}')
-        print(f'IVA 19%: {subtotal * 0.19}')
-        print(f'TOTAL: {total}')
-        return total
-
-    def agregar_total(self, total, validar_vendedor):
-        validar_vendedor.suma_vendedor += total  
-        print(validar_vendedor.suma_vendedor)
-        vendedor = Vendedor(id_vendedor=validar_vendedor.id_vendedor, suma_vendedor=validar_vendedor.suma_vendedor)
-        vendedor_actualizado = VendedorDAO.actualizar(vendedor)
-        log.info(f'Vendedores actualizados: {vendedor_actualizado}')
-
     def registro_producto(self):
         nombre_producto = input('Ingrese el nombre del producto: ')
         validar_producto = self.validar_producto(nombre_producto)
@@ -251,18 +291,31 @@ class Tienda:
         else:
             print('El vendedor ya está registrado.')
 
+    def validar_cantidad(self, cantidad):
+        if cantidad <= 0:
+            raise ValueError('La cantidad debe ser un número entero positivo.')
+
+
     def validar_venta(self):
-        documento_vendedor = int(input('Ingrese el documento del vendedor a buscar: '))
+        try:
+            documento_vendedor = int(input('Ingrese el documento del vendedor a buscar: '))
+        except ValueError as e:
+            print('Error: Ingresa un número válido para el documento del vendedor.')
+            return
+            
         validar_vendedor = self.validar_vendedor(documento_vendedor)
+
         if not validar_vendedor:
-            print('El vendedor no se encuentra registrado en la base de datos.')
+            print('Error: El vendedor no se encuentra registrado en la base de datos.')
+            return
         else:
             nombre_producto = input('Ingrese el nombre del producto a comprar: ')
             validar_producto = self.validar_producto(nombre_producto)
             if not validar_producto:
-                print('El producto no se encuentra en el inventario.')
+                print('Error: El producto no se encuentra en el inventario.')
             else:
                 total_venta = self.registrar_venta(nombre_producto, validar_producto)
+
         while True:
             instrucciones_venta = '''
                                     Ingrese 1 para imprimir la factura de venta
@@ -271,81 +324,33 @@ class Tienda:
                                     '''
             operacion_venta = input(instrucciones_venta).strip()
             if operacion_venta == '1':
-                total_venta = self.imprimir_factura(validar_vendedor)
+                self.imprimir_factura(validar_vendedor)
+                  # Salir del bucle después de imprimir la factura
             elif operacion_venta == '2':
                 nombre_producto = input('Ingrese el nombre del producto a comprar:')
-                validar_producto = self.validar_producto(nombre_producto)
+                self.validar_producto(nombre_producto)
                 if not validar_producto:
                     print('El producto no se encuentra en el inventario.')
                 else:
-                    total_venta = self.registrar_venta(nombre_producto, validar_producto)
+                    self.registrar_venta(nombre_producto, validar_producto)
             elif operacion_venta == '3':
                 self.agregar_total(total_venta, validar_vendedor)
                 self._lista_temporal.clear()
                 break
             else:
-                print('Opción no válida. Introduce una opción válida.')
+                print('Error: Opción no válida. Introduce una opción válida.')
 
-    def imprimir_ventas(self, lista):
-        # Inicializar la suma total
-        suma_total = 0
+    def validar_producto(self, nombre_producto):
+        # Validar si un vendedor existe en la lista de vendedores
+        producto_encontrado = next((p for p in ProductoDAO._productos if p.nombre_producto == nombre_producto), None)
+        return producto_encontrado
 
-        # Iterar sobre las ventas e imprimir cada una
-        for venta in lista:
-#           suma_total += venta.precio_producto
-            print(venta)
+    def validar_vendedor(self, documento_vendedor):
+        # Validar si un vendedor existe en la lista de vendedores
+        vendedor_encontrado = next((v for v in VendedorDAO._vendedores if v.documento_vendedor == documento_vendedor), None)
+        return vendedor_encontrado
 
-        # Imprimir la suma total
- #       print(f'Total de ventas acumuladas: {suma_total}')
 
-    def menu_interactivo(self):
-        while True:
-            instrucciones = '''
-            Ingrese A para registrar un nuevo producto
-            Ingrese B para imprimir la lista de productos
-            Ingrese X para eliminar un producto
-            Ingrese C para registrar un vendedor
-            Ingrese D para imprimir la lista de vendedores
-            Ingrese Z para eliminar un vendedor
-            Ingrese E para registrar una venta
-            Ingrese V para imprimir la lista de ventas
-            Ingrese O para eliminar una venta
-            Ingrese Q para salir
-            '''
-            
-            operacion = input(instrucciones).strip().upper()
-
-            try:
-                if operacion == 'A':
-                    self.registro_producto()
-                elif operacion == 'B':
-                    productos = ProductoDAO.seleccionar()
-                    self.imprimir_productos(productos)
-                elif operacion == 'X':
-                    id_producto = int(input('Ingrese el ID del producto que desea eliminar: '))
-                    self.eliminar_producto(id_producto)
-                elif operacion == 'C':
-                    self.registrar_vendedor()
-                elif operacion == 'D':
-                    vendedores = VendedorDAO.seleccionar()
-                    self.imprimir_vendedores(vendedores)
-                elif operacion == 'Z':
-                    id_vendedor = int(input('Ingrese el ID del vendedor que desea eliminar: '))
-                    self.eliminar_vendedor(id_vendedor)
-                elif operacion == 'E':
-                    self.validar_venta()
-                elif operacion == 'V':
-                    ventas = VentaDAO.seleccionar()
-                    self.imprimir_ventas(ventas)
-                elif operacion == 'O':
-                    id_venta = int(input('Ingrese el ID de la venta que desea eliminar: '))
-                    self.eliminar_venta(id_venta)
-                elif operacion == 'Q':
-                    break
-                else:
-                    print('Opción no válida. Introduce una opción válida')
-            except Exception as e:
-                print(f'Error inesperado: {e}')
 
 # Iniciar la aplicación
 if __name__ == '__main__':
