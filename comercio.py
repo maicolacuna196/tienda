@@ -121,6 +121,7 @@ class Tienda:
         for venta in lista:
             suma_total += venta.precio_producto
             log.info(venta)
+        log.info(f'Total acumulado ventas: {suma_total}')
 
     def imprimir_factura(self, validar_vendedor):
         nombre_comercial = self._nombre_negocio.center(len(self._nombre_negocio) + 30, '-')
