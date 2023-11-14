@@ -34832,3 +34832,1715 @@ LINE 1: SELECT * FROM venta ORDER BY id_producto
                 ID producto: 36 | Nombre producto: None
                 Precio producto: $0 | Cantidad 43
                 
+08:21:58 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:21:58 AM: DEBUG [conexion.py:25] Creación de pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001C0A8AF3350>
+08:21:58 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001C0AA2ED690; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:21:58 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:21:58 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:21:58 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001C0AA2ED690; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:21:58 AM: INFO [comercio.py:110] 
+                ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Precio producto: $2400 | Cantidad 96
+                
+08:21:58 AM: INFO [comercio.py:110] 
+                ID producto: 35 | Nombre producto: Pasta Doria Bucatini X 250 G
+                Precio producto: $2350 | Cantidad 50
+                
+08:21:58 AM: INFO [comercio.py:110] 
+                ID producto: 36 | Nombre producto: Chocolate Corona Tradicional X 500 G
+                Precio producto: $9400 | Cantidad 41
+                
+08:21:58 AM: INFO [comercio.py:110] 
+                ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Precio producto: $4700 | Cantidad 100
+                
+08:21:58 AM: INFO [comercio.py:110] 
+                ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Precio producto: $10600 | Cantidad 47
+                
+08:21:58 AM: INFO [comercio.py:110] 
+                ID producto: 39 | Nombre producto: Huevo AA Blanco Mariela Amarrado X30Und
+                Precio producto: $19200 | Cantidad 50
+                
+08:21:58 AM: INFO [comercio.py:110] 
+                ID producto: 40 | Nombre producto: Detergente Ariel En Polvo X 2000 G
+                Precio producto: $22900 | Cantidad 50
+                
+08:21:58 AM: INFO [comercio.py:110] 
+                ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Precio producto: $3500 | Cantidad 50
+                
+08:21:58 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:21:58 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001C0AA2ED690; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:21:58 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:21:58 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:21:58 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001C0AA2ED690; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:21:58 AM: INFO [comercio.py:114] 
+                ID vendedor: 18
+                Nombre vendedor: Maicol Alexis Acuña Muethe | Documento vendedor: 1001347612
+                Total ventas acumuladas: 1877793
+                
+08:21:58 AM: INFO [comercio.py:114] 
+                ID vendedor: 19
+                Nombre vendedor: Mayra Alejandra Bermudez Muethe | Documento vendedor: 1233497069
+                Total ventas acumuladas: 386499
+                
+08:21:58 AM: INFO [comercio.py:114] 
+                ID vendedor: 21
+                Nombre vendedor: Johan Sebastian Acuña Muethe | Documento vendedor: 1000522695
+                Total ventas acumuladas: 173605
+                
+08:22:08 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:22:08 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001C0AA2ED690; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:22:08 AM: DEBUG [ventas_dao.py:33] Venta insertada: 
+                ID venta: 0 | |ID producto: 36 | Nombre producto: Chocolate Corona Tradicional X 500 G
+                Venta total: $18800 | Cantidad vendida: 2
+                
+08:22:08 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:22:08 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:22:08 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001C0AA2ED690; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:22:08 AM: INFO [comercio.py:236] Ventas insertadas: 1
+08:22:08 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:22:08 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001C0AA2ED690; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:22:08 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 36 | Nombre producto: None
+                Precio producto: $0 | Cantidad 39
+                
+08:22:08 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:22:08 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:22:08 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001C0AA2ED690; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:22:08 AM: INFO [comercio.py:246] Producto actualizado: 
+                ID producto: 36 | Nombre producto: None
+                Precio producto: $0 | Cantidad 39
+                
+08:22:19 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:22:19 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001C0AA2ED690; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:22:19 AM: DEBUG [ventas_dao.py:33] Venta insertada: 
+                ID venta: 0 | |ID producto: 36 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $28200 | Cantidad vendida: 3
+                
+08:22:19 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:22:19 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:22:19 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001C0AA2ED690; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:22:19 AM: INFO [comercio.py:236] Ventas insertadas: 1
+08:22:19 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:22:19 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001C0AA2ED690; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:22:19 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 36 | Nombre producto: None
+                Precio producto: $0 | Cantidad 36
+                
+08:22:19 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:22:19 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:22:19 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001C0AA2ED690; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:22:19 AM: INFO [comercio.py:246] Producto actualizado: 
+                ID producto: 36 | Nombre producto: None
+                Precio producto: $0 | Cantidad 36
+                
+08:22:36 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:22:36 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001C0AA2ED690; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:22:36 AM: DEBUG [ventas_dao.py:33] Venta insertada: 
+                ID venta: 0 | |ID producto: 36 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $28200 | Cantidad vendida: 3
+                
+08:22:36 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:22:36 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:22:36 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001C0AA2ED690; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:22:36 AM: INFO [comercio.py:236] Ventas insertadas: 1
+08:22:36 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:22:36 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001C0AA2ED690; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:22:36 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 36 | Nombre producto: None
+                Precio producto: $0 | Cantidad 33
+                
+08:22:36 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:22:36 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:22:36 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001C0AA2ED690; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:22:36 AM: INFO [comercio.py:246] Producto actualizado: 
+                ID producto: 36 | Nombre producto: None
+                Precio producto: $0 | Cantidad 33
+                
+08:23:46 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:23:46 AM: DEBUG [conexion.py:25] Creación de pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000002A3F5D171D0>
+08:23:46 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000002A3F7545580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:23:46 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:23:46 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:23:46 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000002A3F7545580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:23:46 AM: INFO [comercio.py:110] 
+                ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Precio producto: $2400 | Cantidad 96
+                
+08:23:46 AM: INFO [comercio.py:110] 
+                ID producto: 35 | Nombre producto: Pasta Doria Bucatini X 250 G
+                Precio producto: $2350 | Cantidad 50
+                
+08:23:46 AM: INFO [comercio.py:110] 
+                ID producto: 36 | Nombre producto: Chocolate Corona Tradicional X 500 G
+                Precio producto: $9400 | Cantidad 33
+                
+08:23:46 AM: INFO [comercio.py:110] 
+                ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Precio producto: $4700 | Cantidad 100
+                
+08:23:46 AM: INFO [comercio.py:110] 
+                ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Precio producto: $10600 | Cantidad 47
+                
+08:23:46 AM: INFO [comercio.py:110] 
+                ID producto: 39 | Nombre producto: Huevo AA Blanco Mariela Amarrado X30Und
+                Precio producto: $19200 | Cantidad 50
+                
+08:23:46 AM: INFO [comercio.py:110] 
+                ID producto: 40 | Nombre producto: Detergente Ariel En Polvo X 2000 G
+                Precio producto: $22900 | Cantidad 50
+                
+08:23:46 AM: INFO [comercio.py:110] 
+                ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Precio producto: $3500 | Cantidad 50
+                
+08:23:46 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:23:46 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000002A3F7545580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:23:46 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:23:46 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:23:46 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000002A3F7545580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:23:46 AM: INFO [comercio.py:114] 
+                ID vendedor: 18
+                Nombre vendedor: Maicol Alexis Acuña Muethe | Documento vendedor: 1001347612
+                Total ventas acumuladas: 1877793
+                
+08:23:46 AM: INFO [comercio.py:114] 
+                ID vendedor: 19
+                Nombre vendedor: Mayra Alejandra Bermudez Muethe | Documento vendedor: 1233497069
+                Total ventas acumuladas: 386499
+                
+08:23:46 AM: INFO [comercio.py:114] 
+                ID vendedor: 21
+                Nombre vendedor: Johan Sebastian Acuña Muethe | Documento vendedor: 1000522695
+                Total ventas acumuladas: 173605
+                
+08:23:51 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:23:51 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000002A3F7545580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:23:51 AM: DEBUG [ventas_dao.py:33] Venta insertada: 
+                ID venta: 0 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $10500 | Cantidad vendida: 3
+                
+08:23:51 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:23:51 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:23:51 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000002A3F7545580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:23:51 AM: INFO [comercio.py:236] Ventas insertadas: 1
+08:23:51 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:23:51 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000002A3F7545580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:23:51 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 41 | Nombre producto: None
+                Precio producto: $0 | Cantidad 47
+                
+08:23:51 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:23:51 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:23:51 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000002A3F7545580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:23:51 AM: INFO [comercio.py:246] Producto actualizado: 
+                ID producto: 41 | Nombre producto: None
+                Precio producto: $0 | Cantidad 47
+                
+08:24:15 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:24:15 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000002A3F7545580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:24:15 AM: DEBUG [ventas_dao.py:33] Venta insertada: 
+                ID venta: 0 | |ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Venta total: $9400 | Cantidad vendida: 2
+                
+08:24:15 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:24:15 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:24:15 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000002A3F7545580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:24:15 AM: INFO [comercio.py:236] Ventas insertadas: 1
+08:24:15 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:24:15 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000002A3F7545580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:24:15 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 37 | Nombre producto: None
+                Precio producto: $0 | Cantidad 98
+                
+08:24:15 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:24:15 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:24:15 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000002A3F7545580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:24:15 AM: INFO [comercio.py:246] Producto actualizado: 
+                ID producto: 37 | Nombre producto: None
+                Precio producto: $0 | Cantidad 98
+                
+08:24:37 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:24:37 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000002A3F7545580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:24:37 AM: DEBUG [ventas_dao.py:33] Venta insertada: 
+                ID venta: 0 | |ID producto: 35 | Nombre producto: Pasta Doria Bucatini X 250 G
+                Venta total: $7050 | Cantidad vendida: 3
+                
+08:24:37 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:24:37 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:24:37 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000002A3F7545580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:24:37 AM: INFO [comercio.py:236] Ventas insertadas: 1
+08:24:37 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:24:37 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000002A3F7545580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:24:37 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 35 | Nombre producto: None
+                Precio producto: $0 | Cantidad 47
+                
+08:24:37 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:24:37 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:24:37 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000002A3F7545580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:24:37 AM: INFO [comercio.py:246] Producto actualizado: 
+                ID producto: 35 | Nombre producto: None
+                Precio producto: $0 | Cantidad 47
+                
+08:24:59 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:24:59 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000002A3F7545580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:24:59 AM: DEBUG [vendedor_dao.py:42] Vendedor actualizado: 
+                ID vendedor: 18
+                Nombre vendedor: None | Documento vendedor: None
+                Total ventas acumuladas: 1909863.5
+                
+08:24:59 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:24:59 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:24:59 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000002A3F7545580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:24:59 AM: INFO [comercio.py:75] Vendedores actualizados: 1
+08:26:54 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:26:55 AM: DEBUG [conexion.py:25] Creación de pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001DA68A271D0>
+08:26:55 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:26:55 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:26:55 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:26:55 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:26:55 AM: INFO [comercio.py:124] Total acumulado ventas: 0
+08:26:56 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:26:56 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:26:56 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:26:56 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:26:56 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:26:56 AM: INFO [comercio.py:124] Total acumulado ventas: 0
+08:26:58 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:26:58 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:26:58 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:26:58 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:26:58 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:26:58 AM: INFO [comercio.py:114] 
+                ID vendedor: 18
+                Nombre vendedor: Maicol Alexis Acuña Muethe | Documento vendedor: 1001347612
+                Total ventas acumuladas: 1909864
+                
+08:26:58 AM: INFO [comercio.py:114] 
+                ID vendedor: 19
+                Nombre vendedor: Mayra Alejandra Bermudez Muethe | Documento vendedor: 1233497069
+                Total ventas acumuladas: 386499
+                
+08:26:58 AM: INFO [comercio.py:114] 
+                ID vendedor: 21
+                Nombre vendedor: Johan Sebastian Acuña Muethe | Documento vendedor: 1000522695
+                Total ventas acumuladas: 173605
+                
+08:26:59 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:26:59 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:26:59 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:26:59 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:26:59 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:26:59 AM: INFO [comercio.py:110] 
+                ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Precio producto: $2400 | Cantidad 96
+                
+08:26:59 AM: INFO [comercio.py:110] 
+                ID producto: 35 | Nombre producto: Pasta Doria Bucatini X 250 G
+                Precio producto: $2350 | Cantidad 47
+                
+08:26:59 AM: INFO [comercio.py:110] 
+                ID producto: 36 | Nombre producto: Chocolate Corona Tradicional X 500 G
+                Precio producto: $9400 | Cantidad 33
+                
+08:26:59 AM: INFO [comercio.py:110] 
+                ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Precio producto: $4700 | Cantidad 98
+                
+08:26:59 AM: INFO [comercio.py:110] 
+                ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Precio producto: $10600 | Cantidad 47
+                
+08:26:59 AM: INFO [comercio.py:110] 
+                ID producto: 39 | Nombre producto: Huevo AA Blanco Mariela Amarrado X30Und
+                Precio producto: $19200 | Cantidad 50
+                
+08:26:59 AM: INFO [comercio.py:110] 
+                ID producto: 40 | Nombre producto: Detergente Ariel En Polvo X 2000 G
+                Precio producto: $22900 | Cantidad 50
+                
+08:26:59 AM: INFO [comercio.py:110] 
+                ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Precio producto: $3500 | Cantidad 47
+                
+08:27:08 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:27:08 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:27:08 AM: DEBUG [ventas_dao.py:33] Venta insertada: 
+                ID venta: 0 | |ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Venta total: $9400 | Cantidad vendida: 2
+                
+08:27:08 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:27:08 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:27:08 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:27:08 AM: INFO [comercio.py:236] Ventas insertadas: 1
+08:27:08 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:27:08 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:27:08 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 37 | Nombre producto: None
+                Precio producto: $0 | Cantidad 96
+                
+08:27:08 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:27:08 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:27:08 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:27:08 AM: INFO [comercio.py:246] Producto actualizado: 
+                ID producto: 37 | Nombre producto: None
+                Precio producto: $0 | Cantidad 96
+                
+08:27:16 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:27:16 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:27:16 AM: DEBUG [ventas_dao.py:33] Venta insertada: 
+                ID venta: 0 | |ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $10600 | Cantidad vendida: 1
+                
+08:27:16 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:27:16 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:27:16 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:27:16 AM: INFO [comercio.py:236] Ventas insertadas: 1
+08:27:16 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:27:16 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:27:16 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 38 | Nombre producto: None
+                Precio producto: $0 | Cantidad 46
+                
+08:27:16 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:27:16 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:27:16 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:27:16 AM: INFO [comercio.py:246] Producto actualizado: 
+                ID producto: 38 | Nombre producto: None
+                Precio producto: $0 | Cantidad 46
+                
+08:27:28 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:27:28 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:27:28 AM: DEBUG [ventas_dao.py:33] Venta insertada: 
+                ID venta: 0 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+08:27:28 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:27:28 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:27:28 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:27:28 AM: INFO [comercio.py:236] Ventas insertadas: 1
+08:27:28 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:27:28 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:27:28 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 41 | Nombre producto: None
+                Precio producto: $0 | Cantidad 45
+                
+08:27:28 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:27:28 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:27:28 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:27:28 AM: INFO [comercio.py:246] Producto actualizado: 
+                ID producto: 41 | Nombre producto: None
+                Precio producto: $0 | Cantidad 45
+                
+08:27:33 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:27:33 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:27:33 AM: DEBUG [vendedor_dao.py:42] Vendedor actualizado: 
+                ID vendedor: 19
+                Nombre vendedor: None | Documento vendedor: None
+                Total ventas acumuladas: 418629.0
+                
+08:27:33 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:27:33 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:27:33 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:27:33 AM: INFO [comercio.py:75] Vendedores actualizados: 1
+08:27:34 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:27:34 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:27:34 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:27:34 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:27:34 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:27:34 AM: INFO [comercio.py:123] 
+                ID venta: 55 | |ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Venta total: $9400 | Cantidad vendida: 2
+                
+08:27:34 AM: INFO [comercio.py:123] 
+                ID venta: 56 | |ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $10600 | Cantidad vendida: 1
+                
+08:27:34 AM: INFO [comercio.py:123] 
+                ID venta: 57 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+08:27:34 AM: INFO [comercio.py:124] Total acumulado ventas: 27000
+08:28:19 AM: INFO [comercio.py:110] 
+                ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Precio producto: $2400 | Cantidad 96
+                
+08:28:19 AM: INFO [comercio.py:110] 
+                ID producto: 35 | Nombre producto: Pasta Doria Bucatini X 250 G
+                Precio producto: $2350 | Cantidad 47
+                
+08:28:19 AM: INFO [comercio.py:110] 
+                ID producto: 36 | Nombre producto: Chocolate Corona Tradicional X 500 G
+                Precio producto: $9400 | Cantidad 33
+                
+08:28:19 AM: INFO [comercio.py:110] 
+                ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Precio producto: $4700 | Cantidad 96
+                
+08:28:19 AM: INFO [comercio.py:110] 
+                ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Precio producto: $10600 | Cantidad 46
+                
+08:28:19 AM: INFO [comercio.py:110] 
+                ID producto: 39 | Nombre producto: Huevo AA Blanco Mariela Amarrado X30Und
+                Precio producto: $19200 | Cantidad 50
+                
+08:28:19 AM: INFO [comercio.py:110] 
+                ID producto: 40 | Nombre producto: Detergente Ariel En Polvo X 2000 G
+                Precio producto: $22900 | Cantidad 50
+                
+08:28:19 AM: INFO [comercio.py:110] 
+                ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Precio producto: $3500 | Cantidad 45
+                
+08:28:20 AM: INFO [comercio.py:114] 
+                ID vendedor: 18
+                Nombre vendedor: Maicol Alexis Acuña Muethe | Documento vendedor: 1001347612
+                Total ventas acumuladas: 1909864
+                
+08:28:20 AM: INFO [comercio.py:114] 
+                ID vendedor: 19
+                Nombre vendedor: Mayra Alejandra Bermudez Muethe | Documento vendedor: 1233497069
+                Total ventas acumuladas: 418629.0
+                
+08:28:20 AM: INFO [comercio.py:114] 
+                ID vendedor: 21
+                Nombre vendedor: Johan Sebastian Acuña Muethe | Documento vendedor: 1000522695
+                Total ventas acumuladas: 173605
+                
+08:28:27 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:28:27 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:28:27 AM: DEBUG [ventas_dao.py:33] Venta insertada: 
+                ID venta: 0 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $3500 | Cantidad vendida: 1
+                
+08:28:27 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:28:27 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:28:27 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:28:27 AM: INFO [comercio.py:236] Ventas insertadas: 1
+08:28:27 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:28:27 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:28:27 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 41 | Nombre producto: None
+                Precio producto: $0 | Cantidad 44
+                
+08:28:27 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:28:27 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:28:27 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:28:27 AM: INFO [comercio.py:246] Producto actualizado: 
+                ID producto: 41 | Nombre producto: None
+                Precio producto: $0 | Cantidad 44
+                
+08:28:30 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:28:30 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:28:30 AM: DEBUG [vendedor_dao.py:42] Vendedor actualizado: 
+                ID vendedor: 21
+                Nombre vendedor: None | Documento vendedor: None
+                Total ventas acumuladas: 177770.0
+                
+08:28:30 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:28:30 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:28:30 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001DA6A2B5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:28:30 AM: INFO [comercio.py:75] Vendedores actualizados: 1
+08:28:32 AM: INFO [comercio.py:123] 
+                ID venta: 55 | |ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Venta total: $9400 | Cantidad vendida: 2
+                
+08:28:32 AM: INFO [comercio.py:123] 
+                ID venta: 56 | |ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $10600 | Cantidad vendida: 1
+                
+08:28:32 AM: INFO [comercio.py:123] 
+                ID venta: 57 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+08:28:32 AM: INFO [comercio.py:124] Total acumulado ventas: 27000
+08:28:47 AM: INFO [comercio.py:123] 
+                ID venta: 55 | |ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Venta total: $9400 | Cantidad vendida: 2
+                
+08:28:47 AM: INFO [comercio.py:123] 
+                ID venta: 56 | |ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $10600 | Cantidad vendida: 1
+                
+08:28:47 AM: INFO [comercio.py:123] 
+                ID venta: 57 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+08:28:47 AM: INFO [comercio.py:124] Total acumulado ventas: 27000
+08:28:47 AM: INFO [comercio.py:123] 
+                ID venta: 55 | |ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Venta total: $9400 | Cantidad vendida: 2
+                
+08:28:47 AM: INFO [comercio.py:123] 
+                ID venta: 56 | |ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $10600 | Cantidad vendida: 1
+                
+08:28:47 AM: INFO [comercio.py:123] 
+                ID venta: 57 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+08:28:47 AM: INFO [comercio.py:124] Total acumulado ventas: 27000
+08:28:52 AM: INFO [comercio.py:123] 
+                ID venta: 55 | |ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Venta total: $9400 | Cantidad vendida: 2
+                
+08:28:52 AM: INFO [comercio.py:123] 
+                ID venta: 56 | |ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $10600 | Cantidad vendida: 1
+                
+08:28:52 AM: INFO [comercio.py:123] 
+                ID venta: 57 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+08:28:52 AM: INFO [comercio.py:124] Total acumulado ventas: 27000
+08:28:52 AM: INFO [comercio.py:123] 
+                ID venta: 55 | |ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Venta total: $9400 | Cantidad vendida: 2
+                
+08:28:52 AM: INFO [comercio.py:123] 
+                ID venta: 56 | |ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $10600 | Cantidad vendida: 1
+                
+08:28:52 AM: INFO [comercio.py:123] 
+                ID venta: 57 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+08:28:52 AM: INFO [comercio.py:124] Total acumulado ventas: 27000
+08:28:52 AM: INFO [comercio.py:123] 
+                ID venta: 55 | |ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Venta total: $9400 | Cantidad vendida: 2
+                
+08:28:52 AM: INFO [comercio.py:123] 
+                ID venta: 56 | |ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $10600 | Cantidad vendida: 1
+                
+08:28:52 AM: INFO [comercio.py:123] 
+                ID venta: 57 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+08:28:52 AM: INFO [comercio.py:124] Total acumulado ventas: 27000
+08:28:52 AM: INFO [comercio.py:123] 
+                ID venta: 55 | |ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Venta total: $9400 | Cantidad vendida: 2
+                
+08:28:52 AM: INFO [comercio.py:123] 
+                ID venta: 56 | |ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $10600 | Cantidad vendida: 1
+                
+08:28:52 AM: INFO [comercio.py:123] 
+                ID venta: 57 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+08:28:52 AM: INFO [comercio.py:124] Total acumulado ventas: 27000
+08:28:59 AM: INFO [comercio.py:123] 
+                ID venta: 55 | |ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Venta total: $9400 | Cantidad vendida: 2
+                
+08:28:59 AM: INFO [comercio.py:123] 
+                ID venta: 56 | |ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $10600 | Cantidad vendida: 1
+                
+08:28:59 AM: INFO [comercio.py:123] 
+                ID venta: 57 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+08:28:59 AM: INFO [comercio.py:124] Total acumulado ventas: 27000
+08:29:04 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:29:04 AM: DEBUG [conexion.py:25] Creación de pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000002B5E94A71D0>
+08:29:04 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000002B5EACA5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:29:04 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:29:04 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:29:04 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000002B5EACA5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:29:04 AM: INFO [comercio.py:123] 
+                ID venta: 55 | |ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Venta total: $9400 | Cantidad vendida: 2
+                
+08:29:04 AM: INFO [comercio.py:123] 
+                ID venta: 56 | |ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $10600 | Cantidad vendida: 1
+                
+08:29:04 AM: INFO [comercio.py:123] 
+                ID venta: 57 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+08:29:04 AM: INFO [comercio.py:123] 
+                ID venta: 58 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $3500 | Cantidad vendida: 1
+                
+08:29:04 AM: INFO [comercio.py:124] Total acumulado ventas: 30500
+08:37:00 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:37:00 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000002B5EACA5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:37:00 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:37:00 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:37:00 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000002B5EACA5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:37:00 AM: INFO [comercio.py:110] 
+                ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Precio producto: $2400 | Cantidad 96
+                
+08:37:00 AM: INFO [comercio.py:110] 
+                ID producto: 35 | Nombre producto: Pasta Doria Bucatini X 250 G
+                Precio producto: $2350 | Cantidad 47
+                
+08:37:00 AM: INFO [comercio.py:110] 
+                ID producto: 36 | Nombre producto: Chocolate Corona Tradicional X 500 G
+                Precio producto: $9400 | Cantidad 33
+                
+08:37:00 AM: INFO [comercio.py:110] 
+                ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Precio producto: $4700 | Cantidad 96
+                
+08:37:00 AM: INFO [comercio.py:110] 
+                ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Precio producto: $10600 | Cantidad 46
+                
+08:37:00 AM: INFO [comercio.py:110] 
+                ID producto: 39 | Nombre producto: Huevo AA Blanco Mariela Amarrado X30Und
+                Precio producto: $19200 | Cantidad 50
+                
+08:37:00 AM: INFO [comercio.py:110] 
+                ID producto: 40 | Nombre producto: Detergente Ariel En Polvo X 2000 G
+                Precio producto: $22900 | Cantidad 50
+                
+08:37:00 AM: INFO [comercio.py:110] 
+                ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Precio producto: $3500 | Cantidad 44
+                
+08:37:01 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:37:01 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000002B5EACA5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:37:01 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:37:01 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:37:01 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000002B5EACA5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:37:01 AM: INFO [comercio.py:114] 
+                ID vendedor: 18
+                Nombre vendedor: Maicol Alexis Acuña Muethe | Documento vendedor: 1001347612
+                Total ventas acumuladas: 1909864
+                
+08:37:01 AM: INFO [comercio.py:114] 
+                ID vendedor: 19
+                Nombre vendedor: Mayra Alejandra Bermudez Muethe | Documento vendedor: 1233497069
+                Total ventas acumuladas: 418629
+                
+08:37:01 AM: INFO [comercio.py:114] 
+                ID vendedor: 21
+                Nombre vendedor: Johan Sebastian Acuña Muethe | Documento vendedor: 1000522695
+                Total ventas acumuladas: 177770
+                
+08:40:57 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:40:57 AM: DEBUG [conexion.py:25] Creación de pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x0000019E34234890>
+08:40:57 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x0000019E35AA5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:40:57 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:40:57 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:40:57 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x0000019E35AA5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:40:57 AM: INFO [comercio.py:114] 
+                ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Precio producto: $2400 | Cantidad 96
+                
+08:40:57 AM: INFO [comercio.py:114] 
+                ID producto: 35 | Nombre producto: Pasta Doria Bucatini X 250 G
+                Precio producto: $2350 | Cantidad 47
+                
+08:40:57 AM: INFO [comercio.py:114] 
+                ID producto: 36 | Nombre producto: Chocolate Corona Tradicional X 500 G
+                Precio producto: $9400 | Cantidad 33
+                
+08:40:57 AM: INFO [comercio.py:114] 
+                ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Precio producto: $4700 | Cantidad 96
+                
+08:40:57 AM: INFO [comercio.py:114] 
+                ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Precio producto: $10600 | Cantidad 46
+                
+08:40:57 AM: INFO [comercio.py:114] 
+                ID producto: 39 | Nombre producto: Huevo AA Blanco Mariela Amarrado X30Und
+                Precio producto: $19200 | Cantidad 50
+                
+08:40:57 AM: INFO [comercio.py:114] 
+                ID producto: 40 | Nombre producto: Detergente Ariel En Polvo X 2000 G
+                Precio producto: $22900 | Cantidad 50
+                
+08:40:57 AM: INFO [comercio.py:114] 
+                ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Precio producto: $3500 | Cantidad 44
+                
+08:41:46 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:41:46 AM: DEBUG [conexion.py:25] Creación de pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000002C120E728D0>
+08:41:46 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000002C120DC5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:41:46 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:41:46 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:41:46 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000002C120DC5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:41:46 AM: INFO [comercio.py:114] 
+                ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Precio producto: $2400 | Cantidad 96
+                
+08:41:46 AM: INFO [comercio.py:114] 
+                ID producto: 35 | Nombre producto: Pasta Doria Bucatini X 250 G
+                Precio producto: $2350 | Cantidad 47
+                
+08:41:46 AM: INFO [comercio.py:114] 
+                ID producto: 36 | Nombre producto: Chocolate Corona Tradicional X 500 G
+                Precio producto: $9400 | Cantidad 33
+                
+08:41:46 AM: INFO [comercio.py:114] 
+                ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Precio producto: $4700 | Cantidad 96
+                
+08:41:46 AM: INFO [comercio.py:114] 
+                ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Precio producto: $10600 | Cantidad 46
+                
+08:41:46 AM: INFO [comercio.py:114] 
+                ID producto: 39 | Nombre producto: Huevo AA Blanco Mariela Amarrado X30Und
+                Precio producto: $19200 | Cantidad 50
+                
+08:41:46 AM: INFO [comercio.py:114] 
+                ID producto: 40 | Nombre producto: Detergente Ariel En Polvo X 2000 G
+                Precio producto: $22900 | Cantidad 50
+                
+08:41:46 AM: INFO [comercio.py:114] 
+                ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Precio producto: $3500 | Cantidad 44
+                
+08:41:48 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:41:48 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000002C120DC5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:41:48 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:41:48 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:41:48 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000002C120DC5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:41:48 AM: INFO [comercio.py:118] 
+                ID vendedor: 18
+                Nombre vendedor: Maicol Alexis Acuña Muethe | Documento vendedor: 1001347612
+                Total ventas acumuladas: 1909864
+                
+08:41:48 AM: INFO [comercio.py:118] 
+                ID vendedor: 19
+                Nombre vendedor: Mayra Alejandra Bermudez Muethe | Documento vendedor: 1233497069
+                Total ventas acumuladas: 418629
+                
+08:41:48 AM: INFO [comercio.py:118] 
+                ID vendedor: 21
+                Nombre vendedor: Johan Sebastian Acuña Muethe | Documento vendedor: 1000522695
+                Total ventas acumuladas: 177770
+                
+08:50:45 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:50:45 AM: DEBUG [conexion.py:25] Creación de pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001EF145871D0>
+08:50:45 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001EF15E05580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:50:45 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:50:45 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:50:45 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001EF15E05580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:50:45 AM: INFO [comercio.py:124] 
+                ID venta: 55 | |ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Venta total: $9400 | Cantidad vendida: 2
+                
+08:50:45 AM: INFO [comercio.py:124] 
+                ID venta: 56 | |ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $10600 | Cantidad vendida: 1
+                
+08:50:45 AM: INFO [comercio.py:124] 
+                ID venta: 57 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+08:50:45 AM: INFO [comercio.py:124] 
+                ID venta: 58 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $3500 | Cantidad vendida: 1
+                
+08:50:45 AM: INFO [comercio.py:125] Total acumulado ventas: 30500
+08:50:46 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:50:46 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001EF15E05580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:50:46 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:50:46 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:50:46 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001EF15E05580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:50:46 AM: INFO [comercio.py:111] 
+                ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Precio producto: $2400 | Cantidad 96
+                
+08:50:46 AM: INFO [comercio.py:111] 
+                ID producto: 35 | Nombre producto: Pasta Doria Bucatini X 250 G
+                Precio producto: $2350 | Cantidad 47
+                
+08:50:46 AM: INFO [comercio.py:111] 
+                ID producto: 36 | Nombre producto: Chocolate Corona Tradicional X 500 G
+                Precio producto: $9400 | Cantidad 33
+                
+08:50:46 AM: INFO [comercio.py:111] 
+                ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Precio producto: $4700 | Cantidad 96
+                
+08:50:46 AM: INFO [comercio.py:111] 
+                ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Precio producto: $10600 | Cantidad 46
+                
+08:50:46 AM: INFO [comercio.py:111] 
+                ID producto: 39 | Nombre producto: Huevo AA Blanco Mariela Amarrado X30Und
+                Precio producto: $19200 | Cantidad 50
+                
+08:50:46 AM: INFO [comercio.py:111] 
+                ID producto: 40 | Nombre producto: Detergente Ariel En Polvo X 2000 G
+                Precio producto: $22900 | Cantidad 50
+                
+08:50:46 AM: INFO [comercio.py:111] 
+                ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Precio producto: $3500 | Cantidad 44
+                
+08:50:47 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:50:47 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001EF15E05580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:50:47 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:50:47 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:50:47 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001EF15E05580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:50:47 AM: INFO [comercio.py:115] 
+                ID vendedor: 18
+                Nombre vendedor: Maicol Alexis Acuña Muethe | Documento vendedor: 1001347612
+                Total ventas acumuladas: 1909864
+                
+08:50:47 AM: INFO [comercio.py:115] 
+                ID vendedor: 19
+                Nombre vendedor: Mayra Alejandra Bermudez Muethe | Documento vendedor: 1233497069
+                Total ventas acumuladas: 418629
+                
+08:50:47 AM: INFO [comercio.py:115] 
+                ID vendedor: 21
+                Nombre vendedor: Johan Sebastian Acuña Muethe | Documento vendedor: 1000522695
+                Total ventas acumuladas: 177770
+                
+08:50:57 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:50:57 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001EF15E05580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:50:57 AM: DEBUG [ventas_dao.py:33] Venta insertada: 
+                ID venta: 0 | |ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Venta total: $7200 | Cantidad vendida: 3
+                
+08:50:57 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:50:57 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:50:57 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001EF15E05580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:50:57 AM: INFO [comercio.py:240] Ventas insertadas: 1
+08:50:57 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:50:57 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001EF15E05580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:50:57 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 34 | Nombre producto: None
+                Precio producto: $0 | Cantidad 93
+                
+08:50:57 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:50:57 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:50:57 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001EF15E05580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:50:57 AM: INFO [comercio.py:250] Producto actualizado: 
+                ID producto: 34 | Nombre producto: None
+                Precio producto: $0 | Cantidad 93
+                
+08:51:12 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:51:12 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001EF15E05580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:51:12 AM: DEBUG [ventas_dao.py:33] Venta insertada: 
+                ID venta: 0 | |ID producto: 39 | Nombre producto: Huevo AA Blanco Mariela Amarrado X30Und
+                Venta total: $19200 | Cantidad vendida: 1
+                
+08:51:12 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:51:12 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:51:12 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001EF15E05580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:51:12 AM: INFO [comercio.py:240] Ventas insertadas: 1
+08:51:12 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:51:12 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001EF15E05580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:51:12 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 39 | Nombre producto: None
+                Precio producto: $0 | Cantidad 49
+                
+08:51:12 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:51:12 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:51:12 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001EF15E05580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:51:12 AM: INFO [comercio.py:250] Producto actualizado: 
+                ID producto: 39 | Nombre producto: None
+                Precio producto: $0 | Cantidad 49
+                
+08:51:19 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:51:19 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001EF15E05580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:51:19 AM: DEBUG [vendedor_dao.py:42] Vendedor actualizado: 
+                ID vendedor: 18
+                Nombre vendedor: None | Documento vendedor: None
+                Total ventas acumuladas: 1941280.0
+                
+08:51:19 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:51:19 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:51:19 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001EF15E05580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:51:19 AM: INFO [comercio.py:76] Vendedores actualizados: 1
+08:51:20 AM: INFO [comercio.py:111] 
+                ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Precio producto: $2400 | Cantidad 93
+                
+08:51:20 AM: INFO [comercio.py:111] 
+                ID producto: 35 | Nombre producto: Pasta Doria Bucatini X 250 G
+                Precio producto: $2350 | Cantidad 47
+                
+08:51:20 AM: INFO [comercio.py:111] 
+                ID producto: 36 | Nombre producto: Chocolate Corona Tradicional X 500 G
+                Precio producto: $9400 | Cantidad 33
+                
+08:51:20 AM: INFO [comercio.py:111] 
+                ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Precio producto: $4700 | Cantidad 96
+                
+08:51:20 AM: INFO [comercio.py:111] 
+                ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Precio producto: $10600 | Cantidad 46
+                
+08:51:20 AM: INFO [comercio.py:111] 
+                ID producto: 39 | Nombre producto: Huevo AA Blanco Mariela Amarrado X30Und
+                Precio producto: $19200 | Cantidad 49
+                
+08:51:20 AM: INFO [comercio.py:111] 
+                ID producto: 40 | Nombre producto: Detergente Ariel En Polvo X 2000 G
+                Precio producto: $22900 | Cantidad 50
+                
+08:51:20 AM: INFO [comercio.py:111] 
+                ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Precio producto: $3500 | Cantidad 44
+                
+08:51:36 AM: INFO [comercio.py:124] 
+                ID venta: 55 | |ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Venta total: $9400 | Cantidad vendida: 2
+                
+08:51:36 AM: INFO [comercio.py:124] 
+                ID venta: 56 | |ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $10600 | Cantidad vendida: 1
+                
+08:51:36 AM: INFO [comercio.py:124] 
+                ID venta: 57 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+08:51:36 AM: INFO [comercio.py:124] 
+                ID venta: 58 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $3500 | Cantidad vendida: 1
+                
+08:51:36 AM: INFO [comercio.py:125] Total acumulado ventas: 30500
+08:51:38 AM: INFO [comercio.py:124] 
+                ID venta: 55 | |ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Venta total: $9400 | Cantidad vendida: 2
+                
+08:51:38 AM: INFO [comercio.py:124] 
+                ID venta: 56 | |ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $10600 | Cantidad vendida: 1
+                
+08:51:38 AM: INFO [comercio.py:124] 
+                ID venta: 57 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+08:51:38 AM: INFO [comercio.py:124] 
+                ID venta: 58 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $3500 | Cantidad vendida: 1
+                
+08:51:38 AM: INFO [comercio.py:125] Total acumulado ventas: 30500
+08:51:43 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:51:43 AM: DEBUG [conexion.py:25] Creación de pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001DD968E71D0>
+08:51:43 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001DD980E5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:51:43 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:51:43 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:51:43 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001DD980E5580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:51:43 AM: INFO [comercio.py:124] 
+                ID venta: 55 | |ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Venta total: $9400 | Cantidad vendida: 2
+                
+08:51:43 AM: INFO [comercio.py:124] 
+                ID venta: 56 | |ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $10600 | Cantidad vendida: 1
+                
+08:51:43 AM: INFO [comercio.py:124] 
+                ID venta: 57 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+08:51:43 AM: INFO [comercio.py:124] 
+                ID venta: 58 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $3500 | Cantidad vendida: 1
+                
+08:51:43 AM: INFO [comercio.py:124] 
+                ID venta: 59 | |ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Venta total: $7200 | Cantidad vendida: 3
+                
+08:51:43 AM: INFO [comercio.py:124] 
+                ID venta: 60 | |ID producto: 39 | Nombre producto: Huevo AA Blanco Mariela Amarrado X30Und
+                Venta total: $19200 | Cantidad vendida: 1
+                
+08:51:43 AM: INFO [comercio.py:125] Total acumulado ventas: 56900
+08:55:04 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:55:04 AM: DEBUG [conexion.py:25] Creación de pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001E4B86CA710>
+08:55:04 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001E4BA415580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:55:04 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:55:04 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:55:04 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001E4BA415580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:55:04 AM: INFO [comercio.py:120] 
+                ID vendedor: 18
+                Nombre vendedor: Maicol Alexis Acuña Muethe | Documento vendedor: 1001347612
+                Total ventas acumuladas: 1941280
+                
+08:55:04 AM: INFO [comercio.py:120] 
+                ID vendedor: 19
+                Nombre vendedor: Mayra Alejandra Bermudez Muethe | Documento vendedor: 1233497069
+                Total ventas acumuladas: 418629
+                
+08:55:04 AM: INFO [comercio.py:120] 
+                ID vendedor: 21
+                Nombre vendedor: Johan Sebastian Acuña Muethe | Documento vendedor: 1000522695
+                Total ventas acumuladas: 177770
+                
+08:55:04 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+08:55:04 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001E4BA415580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:55:04 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+08:55:04 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+08:55:04 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001E4BA415580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+08:55:04 AM: INFO [comercio.py:116] 
+                ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Precio producto: $2400 | Cantidad 93
+                
+08:55:04 AM: INFO [comercio.py:116] 
+                ID producto: 35 | Nombre producto: Pasta Doria Bucatini X 250 G
+                Precio producto: $2350 | Cantidad 47
+                
+08:55:04 AM: INFO [comercio.py:116] 
+                ID producto: 36 | Nombre producto: Chocolate Corona Tradicional X 500 G
+                Precio producto: $9400 | Cantidad 33
+                
+08:55:04 AM: INFO [comercio.py:116] 
+                ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Precio producto: $4700 | Cantidad 96
+                
+08:55:04 AM: INFO [comercio.py:116] 
+                ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Precio producto: $10600 | Cantidad 46
+                
+08:55:04 AM: INFO [comercio.py:116] 
+                ID producto: 39 | Nombre producto: Huevo AA Blanco Mariela Amarrado X30Und
+                Precio producto: $19200 | Cantidad 49
+                
+08:55:04 AM: INFO [comercio.py:116] 
+                ID producto: 40 | Nombre producto: Detergente Ariel En Polvo X 2000 G
+                Precio producto: $22900 | Cantidad 50
+                
+08:55:04 AM: INFO [comercio.py:116] 
+                ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Precio producto: $3500 | Cantidad 44
+                
+09:23:49 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:23:49 AM: DEBUG [conexion.py:25] Creación de pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001FA24CEA710>
+09:23:49 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:23:49 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:23:49 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:23:49 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:23:49 AM: INFO [comercio.py:117] 
+                ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Precio producto: $2400 | Cantidad 93
+                
+09:23:49 AM: INFO [comercio.py:117] 
+                ID producto: 35 | Nombre producto: Pasta Doria Bucatini X 250 G
+                Precio producto: $2350 | Cantidad 47
+                
+09:23:49 AM: INFO [comercio.py:117] 
+                ID producto: 36 | Nombre producto: Chocolate Corona Tradicional X 500 G
+                Precio producto: $9400 | Cantidad 33
+                
+09:23:49 AM: INFO [comercio.py:117] 
+                ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Precio producto: $4700 | Cantidad 96
+                
+09:23:49 AM: INFO [comercio.py:117] 
+                ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Precio producto: $10600 | Cantidad 46
+                
+09:23:49 AM: INFO [comercio.py:117] 
+                ID producto: 39 | Nombre producto: Huevo AA Blanco Mariela Amarrado X30Und
+                Precio producto: $19200 | Cantidad 49
+                
+09:23:49 AM: INFO [comercio.py:117] 
+                ID producto: 40 | Nombre producto: Detergente Ariel En Polvo X 2000 G
+                Precio producto: $22900 | Cantidad 50
+                
+09:23:49 AM: INFO [comercio.py:117] 
+                ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Precio producto: $3500 | Cantidad 44
+                
+09:23:49 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:23:49 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:23:49 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:23:49 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:23:49 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:23:49 AM: INFO [comercio.py:121] 
+                ID vendedor: 18
+                Nombre vendedor: Maicol Alexis Acuña Muethe | Documento vendedor: 1001347612
+                Total ventas acumuladas: 1941280
+                
+09:23:49 AM: INFO [comercio.py:121] 
+                ID vendedor: 19
+                Nombre vendedor: Mayra Alejandra Bermudez Muethe | Documento vendedor: 1233497069
+                Total ventas acumuladas: 418629
+                
+09:23:49 AM: INFO [comercio.py:121] 
+                ID vendedor: 21
+                Nombre vendedor: Johan Sebastian Acuña Muethe | Documento vendedor: 1000522695
+                Total ventas acumuladas: 177770
+                
+09:23:58 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:23:58 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:23:58 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Precio producto: $2400 | Cantidad 90
+                
+09:23:58 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:23:58 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:23:58 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:23:58 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:23:58 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:23:58 AM: DEBUG [ventas_dao.py:33] Venta insertada: 
+                ID venta: 0 | |ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Venta total: $7200 | Cantidad vendida: 3
+                
+09:23:58 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:23:58 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:23:58 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:23:58 AM: INFO [comercio.py:242] Ventas insertadas: 1
+09:23:58 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:23:58 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:23:58 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 34 | Nombre producto: None
+                Precio producto: $0 | Cantidad 90
+                
+09:23:58 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:23:58 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:23:58 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:23:58 AM: INFO [comercio.py:252] Producto actualizado: 
+                ID producto: 34 | Nombre producto: None
+                Precio producto: $0 | Cantidad 90
+                
+09:24:07 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:24:07 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:24:07 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 40 | Nombre producto: Detergente Ariel En Polvo X 2000 G
+                Precio producto: $22900 | Cantidad 49
+                
+09:24:07 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:24:07 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:24:07 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:24:07 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:24:07 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:24:07 AM: DEBUG [ventas_dao.py:33] Venta insertada: 
+                ID venta: 0 | |ID producto: 40 | Nombre producto: Detergente Ariel En Polvo X 2000 G
+                Venta total: $22900 | Cantidad vendida: 1
+                
+09:24:07 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:24:07 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:24:07 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:24:07 AM: INFO [comercio.py:242] Ventas insertadas: 1
+09:24:07 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:24:07 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:24:07 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 40 | Nombre producto: None
+                Precio producto: $0 | Cantidad 49
+                
+09:24:07 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:24:07 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:24:07 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:24:07 AM: INFO [comercio.py:252] Producto actualizado: 
+                ID producto: 40 | Nombre producto: None
+                Precio producto: $0 | Cantidad 49
+                
+09:24:19 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:24:19 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:24:19 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Precio producto: $3500 | Cantidad 42
+                
+09:24:19 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:24:19 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:24:19 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:24:19 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:24:19 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:24:19 AM: DEBUG [ventas_dao.py:33] Venta insertada: 
+                ID venta: 0 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+09:24:19 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:24:19 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:24:19 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:24:19 AM: INFO [comercio.py:242] Ventas insertadas: 1
+09:24:19 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:24:19 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:24:19 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 41 | Nombre producto: None
+                Precio producto: $0 | Cantidad 42
+                
+09:24:19 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:24:19 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:24:19 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:24:19 AM: INFO [comercio.py:252] Producto actualizado: 
+                ID producto: 41 | Nombre producto: None
+                Precio producto: $0 | Cantidad 42
+                
+09:24:38 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:24:38 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:24:38 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Precio producto: $3500 | Cantidad 41
+                
+09:24:38 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:24:38 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:24:38 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:24:38 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:24:38 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:24:38 AM: DEBUG [ventas_dao.py:33] Venta insertada: 
+                ID venta: 0 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $3500 | Cantidad vendida: 1
+                
+09:24:38 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:24:38 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:24:38 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:24:38 AM: INFO [comercio.py:242] Ventas insertadas: 1
+09:24:38 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:24:38 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:24:38 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 41 | Nombre producto: None
+                Precio producto: $0 | Cantidad 41
+                
+09:24:38 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:24:38 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:24:38 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001FA26A65580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:24:38 AM: INFO [comercio.py:252] Producto actualizado: 
+                ID producto: 41 | Nombre producto: None
+                Precio producto: $0 | Cantidad 41
+                
+09:26:08 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:26:09 AM: DEBUG [conexion.py:25] Creación de pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001F118ACA710>
+09:26:09 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:09 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:26:09 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:26:09 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:09 AM: INFO [comercio.py:130] 
+                ID venta: 55 | |ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Venta total: $9400 | Cantidad vendida: 2
+                
+09:26:09 AM: INFO [comercio.py:130] 
+                ID venta: 56 | |ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $10600 | Cantidad vendida: 1
+                
+09:26:09 AM: INFO [comercio.py:130] 
+                ID venta: 57 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+09:26:09 AM: INFO [comercio.py:130] 
+                ID venta: 58 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $3500 | Cantidad vendida: 1
+                
+09:26:09 AM: INFO [comercio.py:130] 
+                ID venta: 59 | |ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Venta total: $7200 | Cantidad vendida: 3
+                
+09:26:09 AM: INFO [comercio.py:130] 
+                ID venta: 60 | |ID producto: 39 | Nombre producto: Huevo AA Blanco Mariela Amarrado X30Und
+                Venta total: $19200 | Cantidad vendida: 1
+                
+09:26:09 AM: INFO [comercio.py:130] 
+                ID venta: 61 | |ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Venta total: $7200 | Cantidad vendida: 3
+                
+09:26:09 AM: INFO [comercio.py:130] 
+                ID venta: 62 | |ID producto: 40 | Nombre producto: Detergente Ariel En Polvo X 2000 G
+                Venta total: $22900 | Cantidad vendida: 1
+                
+09:26:09 AM: INFO [comercio.py:130] 
+                ID venta: 63 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+09:26:09 AM: INFO [comercio.py:130] 
+                ID venta: 64 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $3500 | Cantidad vendida: 1
+                
+09:26:09 AM: INFO [comercio.py:131] Total acumulado ventas: 97500
+09:26:19 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:26:19 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:19 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:26:19 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:26:19 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:19 AM: INFO [comercio.py:121] 
+                ID vendedor: 18
+                Nombre vendedor: Maicol Alexis Acuña Muethe | Documento vendedor: 1001347612
+                Total ventas acumuladas: 1941280
+                
+09:26:19 AM: INFO [comercio.py:121] 
+                ID vendedor: 19
+                Nombre vendedor: Mayra Alejandra Bermudez Muethe | Documento vendedor: 1233497069
+                Total ventas acumuladas: 418629
+                
+09:26:19 AM: INFO [comercio.py:121] 
+                ID vendedor: 21
+                Nombre vendedor: Johan Sebastian Acuña Muethe | Documento vendedor: 1000522695
+                Total ventas acumuladas: 177770
+                
+09:26:19 AM: INFO [comercio.py:130] 
+                ID venta: 55 | |ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Venta total: $9400 | Cantidad vendida: 2
+                
+09:26:19 AM: INFO [comercio.py:130] 
+                ID venta: 56 | |ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $10600 | Cantidad vendida: 1
+                
+09:26:19 AM: INFO [comercio.py:130] 
+                ID venta: 57 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+09:26:19 AM: INFO [comercio.py:130] 
+                ID venta: 58 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $3500 | Cantidad vendida: 1
+                
+09:26:19 AM: INFO [comercio.py:130] 
+                ID venta: 59 | |ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Venta total: $7200 | Cantidad vendida: 3
+                
+09:26:19 AM: INFO [comercio.py:130] 
+                ID venta: 60 | |ID producto: 39 | Nombre producto: Huevo AA Blanco Mariela Amarrado X30Und
+                Venta total: $19200 | Cantidad vendida: 1
+                
+09:26:19 AM: INFO [comercio.py:130] 
+                ID venta: 61 | |ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Venta total: $7200 | Cantidad vendida: 3
+                
+09:26:19 AM: INFO [comercio.py:130] 
+                ID venta: 62 | |ID producto: 40 | Nombre producto: Detergente Ariel En Polvo X 2000 G
+                Venta total: $22900 | Cantidad vendida: 1
+                
+09:26:19 AM: INFO [comercio.py:130] 
+                ID venta: 63 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+09:26:19 AM: INFO [comercio.py:130] 
+                ID venta: 64 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $3500 | Cantidad vendida: 1
+                
+09:26:19 AM: INFO [comercio.py:131] Total acumulado ventas: 97500
+09:26:20 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:26:20 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:20 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:26:20 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:26:20 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:20 AM: INFO [comercio.py:117] 
+                ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Precio producto: $2400 | Cantidad 90
+                
+09:26:20 AM: INFO [comercio.py:117] 
+                ID producto: 35 | Nombre producto: Pasta Doria Bucatini X 250 G
+                Precio producto: $2350 | Cantidad 47
+                
+09:26:20 AM: INFO [comercio.py:117] 
+                ID producto: 36 | Nombre producto: Chocolate Corona Tradicional X 500 G
+                Precio producto: $9400 | Cantidad 33
+                
+09:26:20 AM: INFO [comercio.py:117] 
+                ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Precio producto: $4700 | Cantidad 96
+                
+09:26:20 AM: INFO [comercio.py:117] 
+                ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Precio producto: $10600 | Cantidad 46
+                
+09:26:20 AM: INFO [comercio.py:117] 
+                ID producto: 39 | Nombre producto: Huevo AA Blanco Mariela Amarrado X30Und
+                Precio producto: $19200 | Cantidad 49
+                
+09:26:20 AM: INFO [comercio.py:117] 
+                ID producto: 40 | Nombre producto: Detergente Ariel En Polvo X 2000 G
+                Precio producto: $22900 | Cantidad 49
+                
+09:26:20 AM: INFO [comercio.py:117] 
+                ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Precio producto: $3500 | Cantidad 41
+                
+09:26:28 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:26:28 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:28 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 36 | Nombre producto: Chocolate Corona Tradicional X 500 G
+                Precio producto: $9400 | Cantidad 32
+                
+09:26:28 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:26:28 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:26:28 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:28 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:26:28 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:28 AM: DEBUG [ventas_dao.py:33] Venta insertada: 
+                ID venta: 0 | |ID producto: 36 | Nombre producto: Chocolate Corona Tradicional X 500 G
+                Venta total: $9400 | Cantidad vendida: 1
+                
+09:26:28 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:26:28 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:26:28 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:28 AM: INFO [comercio.py:242] Ventas insertadas: 1
+09:26:28 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:26:28 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:28 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 36 | Nombre producto: None
+                Precio producto: $0 | Cantidad 32
+                
+09:26:28 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:26:28 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:26:28 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:28 AM: INFO [comercio.py:252] Producto actualizado: 
+                ID producto: 36 | Nombre producto: None
+                Precio producto: $0 | Cantidad 32
+                
+09:26:37 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:26:37 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:37 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Precio producto: $10600 | Cantidad 45
+                
+09:26:37 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:26:37 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:26:37 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:37 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:26:37 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:37 AM: DEBUG [ventas_dao.py:33] Venta insertada: 
+                ID venta: 0 | |ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $10600 | Cantidad vendida: 1
+                
+09:26:37 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:26:37 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:26:37 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:37 AM: INFO [comercio.py:242] Ventas insertadas: 1
+09:26:37 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:26:37 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:37 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 38 | Nombre producto: None
+                Precio producto: $0 | Cantidad 45
+                
+09:26:37 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:26:37 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:26:37 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:37 AM: INFO [comercio.py:252] Producto actualizado: 
+                ID producto: 38 | Nombre producto: None
+                Precio producto: $0 | Cantidad 45
+                
+09:26:49 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:26:49 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:49 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Precio producto: $2400 | Cantidad 85
+                
+09:26:49 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:26:49 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:26:49 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:49 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:26:49 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:49 AM: DEBUG [ventas_dao.py:33] Venta insertada: 
+                ID venta: 0 | |ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Venta total: $12000 | Cantidad vendida: 5
+                
+09:26:49 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:26:49 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:26:49 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:49 AM: INFO [comercio.py:242] Ventas insertadas: 1
+09:26:49 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:26:49 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:49 AM: DEBUG [producto_dao.py:41] Producto actualizado: 
+                ID producto: 34 | Nombre producto: None
+                Precio producto: $0 | Cantidad 85
+                
+09:26:49 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:26:49 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:26:49 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:26:49 AM: INFO [comercio.py:252] Producto actualizado: 
+                ID producto: 34 | Nombre producto: None
+                Precio producto: $0 | Cantidad 85
+                
+09:27:43 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:27:43 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:27:43 AM: DEBUG [vendedor_dao.py:42] Vendedor actualizado: 
+                ID vendedor: 18
+                Nombre vendedor: None | Documento vendedor: None
+                Total ventas acumuladas: 1979360.0
+                
+09:27:43 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:27:43 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:27:43 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001F11A815580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:27:43 AM: INFO [comercio.py:76] Vendedores actualizados: 1
+09:27:47 AM: INFO [comercio.py:117] 
+                ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Precio producto: $2400 | Cantidad 85
+                
+09:27:47 AM: INFO [comercio.py:117] 
+                ID producto: 35 | Nombre producto: Pasta Doria Bucatini X 250 G
+                Precio producto: $2350 | Cantidad 47
+                
+09:27:47 AM: INFO [comercio.py:117] 
+                ID producto: 36 | Nombre producto: Chocolate Corona Tradicional X 500 G
+                Precio producto: $9400 | Cantidad 32
+                
+09:27:47 AM: INFO [comercio.py:117] 
+                ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Precio producto: $4700 | Cantidad 96
+                
+09:27:47 AM: INFO [comercio.py:117] 
+                ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Precio producto: $10600 | Cantidad 45
+                
+09:27:47 AM: INFO [comercio.py:117] 
+                ID producto: 39 | Nombre producto: Huevo AA Blanco Mariela Amarrado X30Und
+                Precio producto: $19200 | Cantidad 49
+                
+09:27:47 AM: INFO [comercio.py:117] 
+                ID producto: 40 | Nombre producto: Detergente Ariel En Polvo X 2000 G
+                Precio producto: $22900 | Cantidad 49
+                
+09:27:47 AM: INFO [comercio.py:117] 
+                ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Precio producto: $3500 | Cantidad 41
+                
+09:27:48 AM: INFO [comercio.py:121] 
+                ID vendedor: 18
+                Nombre vendedor: Maicol Alexis Acuña Muethe | Documento vendedor: 1001347612
+                Total ventas acumuladas: 1979360.0
+                
+09:27:48 AM: INFO [comercio.py:121] 
+                ID vendedor: 19
+                Nombre vendedor: Mayra Alejandra Bermudez Muethe | Documento vendedor: 1233497069
+                Total ventas acumuladas: 418629
+                
+09:27:48 AM: INFO [comercio.py:121] 
+                ID vendedor: 21
+                Nombre vendedor: Johan Sebastian Acuña Muethe | Documento vendedor: 1000522695
+                Total ventas acumuladas: 177770
+                
+09:27:49 AM: INFO [comercio.py:130] 
+                ID venta: 55 | |ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Venta total: $9400 | Cantidad vendida: 2
+                
+09:27:49 AM: INFO [comercio.py:130] 
+                ID venta: 56 | |ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $10600 | Cantidad vendida: 1
+                
+09:27:49 AM: INFO [comercio.py:130] 
+                ID venta: 57 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+09:27:49 AM: INFO [comercio.py:130] 
+                ID venta: 58 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $3500 | Cantidad vendida: 1
+                
+09:27:49 AM: INFO [comercio.py:130] 
+                ID venta: 59 | |ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Venta total: $7200 | Cantidad vendida: 3
+                
+09:27:49 AM: INFO [comercio.py:130] 
+                ID venta: 60 | |ID producto: 39 | Nombre producto: Huevo AA Blanco Mariela Amarrado X30Und
+                Venta total: $19200 | Cantidad vendida: 1
+                
+09:27:49 AM: INFO [comercio.py:130] 
+                ID venta: 61 | |ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Venta total: $7200 | Cantidad vendida: 3
+                
+09:27:49 AM: INFO [comercio.py:130] 
+                ID venta: 62 | |ID producto: 40 | Nombre producto: Detergente Ariel En Polvo X 2000 G
+                Venta total: $22900 | Cantidad vendida: 1
+                
+09:27:49 AM: INFO [comercio.py:130] 
+                ID venta: 63 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+09:27:49 AM: INFO [comercio.py:130] 
+                ID venta: 64 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $3500 | Cantidad vendida: 1
+                
+09:27:49 AM: INFO [comercio.py:131] Total acumulado ventas: 97500
+09:27:57 AM: INFO [comercio.py:130] 
+                ID venta: 55 | |ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Venta total: $9400 | Cantidad vendida: 2
+                
+09:27:57 AM: INFO [comercio.py:130] 
+                ID venta: 56 | |ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $10600 | Cantidad vendida: 1
+                
+09:27:57 AM: INFO [comercio.py:130] 
+                ID venta: 57 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+09:27:57 AM: INFO [comercio.py:130] 
+                ID venta: 58 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $3500 | Cantidad vendida: 1
+                
+09:27:57 AM: INFO [comercio.py:130] 
+                ID venta: 59 | |ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Venta total: $7200 | Cantidad vendida: 3
+                
+09:27:57 AM: INFO [comercio.py:130] 
+                ID venta: 60 | |ID producto: 39 | Nombre producto: Huevo AA Blanco Mariela Amarrado X30Und
+                Venta total: $19200 | Cantidad vendida: 1
+                
+09:27:57 AM: INFO [comercio.py:130] 
+                ID venta: 61 | |ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Venta total: $7200 | Cantidad vendida: 3
+                
+09:27:57 AM: INFO [comercio.py:130] 
+                ID venta: 62 | |ID producto: 40 | Nombre producto: Detergente Ariel En Polvo X 2000 G
+                Venta total: $22900 | Cantidad vendida: 1
+                
+09:27:57 AM: INFO [comercio.py:130] 
+                ID venta: 63 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+09:27:57 AM: INFO [comercio.py:130] 
+                ID venta: 64 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $3500 | Cantidad vendida: 1
+                
+09:27:57 AM: INFO [comercio.py:131] Total acumulado ventas: 97500
+09:28:07 AM: DEBUG [cursor_pool.py:10] Inicio del método with __enter__
+09:28:07 AM: DEBUG [conexion.py:25] Creación de pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x000001D1AB9BA710>
+09:28:07 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x000001D1AD795580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:28:07 AM: DEBUG [cursor_pool.py:16] Se ejecuta el método __exit__
+09:28:07 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
+09:28:07 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x000001D1AD795580; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:28:07 AM: INFO [comercio.py:130] 
+                ID venta: 55 | |ID producto: 37 | Nombre producto: Panela Pastilla Dulce Miel Caña X 900 G
+                Venta total: $9400 | Cantidad vendida: 2
+                
+09:28:07 AM: INFO [comercio.py:130] 
+                ID venta: 56 | |ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $10600 | Cantidad vendida: 1
+                
+09:28:07 AM: INFO [comercio.py:130] 
+                ID venta: 57 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+09:28:07 AM: INFO [comercio.py:130] 
+                ID venta: 58 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $3500 | Cantidad vendida: 1
+                
+09:28:07 AM: INFO [comercio.py:130] 
+                ID venta: 59 | |ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Venta total: $7200 | Cantidad vendida: 3
+                
+09:28:07 AM: INFO [comercio.py:130] 
+                ID venta: 60 | |ID producto: 39 | Nombre producto: Huevo AA Blanco Mariela Amarrado X30Und
+                Venta total: $19200 | Cantidad vendida: 1
+                
+09:28:07 AM: INFO [comercio.py:130] 
+                ID venta: 61 | |ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Venta total: $7200 | Cantidad vendida: 3
+                
+09:28:07 AM: INFO [comercio.py:130] 
+                ID venta: 62 | |ID producto: 40 | Nombre producto: Detergente Ariel En Polvo X 2000 G
+                Venta total: $22900 | Cantidad vendida: 1
+                
+09:28:07 AM: INFO [comercio.py:130] 
+                ID venta: 63 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $7000 | Cantidad vendida: 2
+                
+09:28:07 AM: INFO [comercio.py:130] 
+                ID venta: 64 | |ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
+                Venta total: $3500 | Cantidad vendida: 1
+                
+09:28:07 AM: INFO [comercio.py:130] 
+                ID venta: 65 | |ID producto: 36 | Nombre producto: Chocolate Corona Tradicional X 500 G
+                Venta total: $9400 | Cantidad vendida: 1
+                
+09:28:07 AM: INFO [comercio.py:130] 
+                ID venta: 66 | |ID producto: 38 | Nombre producto: Hamburguesa Doña Cleofe Mixta X 500 G
+                Venta total: $10600 | Cantidad vendida: 1
+                
+09:28:07 AM: INFO [comercio.py:130] 
+                ID venta: 67 | |ID producto: 34 | Nombre producto: Arroz Diana X 500 G
+                Venta total: $12000 | Cantidad vendida: 5
+                
+09:28:07 AM: INFO [comercio.py:131] Total acumulado ventas: 129500
