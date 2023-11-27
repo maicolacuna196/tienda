@@ -25,6 +25,13 @@ class ProductoDAO:
             cls.cargar_datos()  # Carga los datos si la lista está vacía
         return cls._productos
 
+    @classmethod
+    def insertar(cls, producto):
+         with CursorPool() as cursor:
+             valores = (producto.nombre_producto, producto.precio_producto, producto.cantidad_producto)
+             cursor.execute(cls._INSERTAR, valores)
+             log.debug(f'Producto insertado: {producto}')
+             return cursor.rowcount
 
     @classmethod
     def actualizar(cls, producto):
