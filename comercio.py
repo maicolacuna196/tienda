@@ -370,7 +370,6 @@ class Tienda:
         return vendedor_encontrado
 
 
-
 # Iniciar la aplicación
 if __name__ == '__main__':
     tienda = Tienda("Mi Tienda", "123 Calle Principal", "555-555-5555", "www.mitienda.com")
