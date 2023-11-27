@@ -138,14 +138,22 @@ class Tienda:
         print(tipo_alimento.ljust(len(tipo_alimento) + 20, '*'))
         print('CANT. DESCRIPCIÓN')
         
+        descuento = 0 
         subtotal = 0
         for item_venta in self._lista_temporal:
             total_venta = item_venta.precio_producto * item_venta.cantidad_producto
             print(f"{item_venta.cantidad_producto} {item_venta.nombre_producto.ljust(len(item_venta.nombre_producto) + 20, '-')} {total_venta}")
             subtotal += total_venta
 
-        iva = subtotal * 0.19
-        total = subtotal + iva
+        if subtotal > 100000:
+            descuento = subtotal * 0.05
+            print(f'¡Felicidades por tu compra! Al superar los $100,000 en tus compras, has obtenido un descuento del 5% en tu total. El descuento aplicado es de: ${descuento}.')
+            iva = subtotal * 0.19
+            total = subtotal + iva - descuento
+        else:
+            iva = subtotal * 0.19
+            total = subtotal + iva - descuento
+
 
         print(f'SUBTOTAL: {subtotal}')
         print(f'IVA 19%: {iva}')
