@@ -57,6 +57,19 @@ class Tienda:
     def agregar_producto(self, producto):
         self._lista_productos.append(producto)
 
+    def actualizar_inventario_gestion(self, lista_productos, id_producto, cantidad_nueva):
+        for producto in lista_productos:
+            if producto.id_producto == id_producto:
+                producto.cantidad_producto += cantidad_nueva
+                productos_actualizados = ProductoDAO.actualizar(producto)
+                if productos_actualizados > 0:
+                    log.info(f'Productos actualizados: {productos_actualizados}')
+                    break  # Termina la iteración después de la actualización
+                else:
+                    log.warning(f'No se pudieron actualizar los productos para el ID: {id_producto}')
+        else:
+            log.warning(f'No se encontraron productos para el ID: {id_producto}')
+
     def imprimir_productos(self, lista_productos):
         for producto in lista_productos:
             log.info(producto)
@@ -121,9 +134,9 @@ class Tienda:
             if self.actualizar_inventario(validar_producto, cantidad):
                 nueva_venta = Producto(id_producto=validar_producto.id_producto, nombre_producto=nombre_producto, precio_producto=validar_producto.precio_producto, cantidad_producto=cantidad)
                 self.agregar_venta(nueva_venta)
-                producto = Producto(id_producto=validar_producto.id_producto, cantidad_producto=validar_producto.cantidad_producto)
+                producto = Producto( cantidad_producto=validar_producto.cantidad_producto,id_producto=validar_producto.id_producto)
                 producto_actualizado = ProductoDAO.actualizar(producto)
-                log.info(f'Producto actualizado: {producto}')
+                log.info(f'Producto actualizado: {producto_actualizado}')
                 self._lista_actualizada.append(producto)
                 valor_total = cantidad * validar_producto.precio_producto
                 return valor_total
@@ -239,6 +252,7 @@ class Tienda:
             instrucciones = '''
             Ingrese A para registrar un nuevo producto
             Ingrese B para imprimir la lista de productos
+            Ingrese M para actualizar la lista de productos
             Ingrese X para eliminar un producto
             Ingrese C para registrar un vendedor
             Ingrese D para imprimir la lista de vendedores
@@ -256,9 +270,15 @@ class Tienda:
                 elif operacion == 'B':
                     productos = ProductoDAO.seleccionar()
                     self.imprimir_productos(productos)
+                elif operacion == 'M':
+                    id_producto = int(input('Ingrese el ID del producto que desea actualizar: '))
+                    cantidad_producto = int(input('Ingrese la cantidad de producto añadido al inventario: '))
+                    productos = ProductoDAO.seleccionar()
+                    self.actualizar_inventario_gestion(productos, id_producto, cantidad_producto)
                 elif operacion == 'X':
                     id_producto = int(input('Ingrese el ID del producto que desea eliminar: '))
                     self.eliminar_producto(id_producto)
+                
                 elif operacion == 'C':
                     self.registrar_vendedor()
                 elif operacion == 'D':
