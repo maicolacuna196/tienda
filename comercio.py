@@ -86,7 +86,6 @@ class Tienda:
 
     def validar_producto(self, nombre_producto):
         # Validar si un vendedor existe en la lista de vendedores
-        # for producto in self._lista_productos:
         for producto in ProductoDAO._productos:
             if producto.nombre_producto == nombre_producto:
                 return producto
@@ -119,7 +118,6 @@ class Tienda:
                 print('La cantidad debe ser un número entero positivo.')
                 return 0
             
-
             if self.actualizar_inventario(validar_producto, cantidad):
                 nueva_venta = Producto(id_producto=validar_producto.id_producto, nombre_producto=nombre_producto, precio_producto=validar_producto.precio_producto, cantidad_producto=cantidad)
                 self.agregar_venta(nueva_venta)
@@ -154,6 +152,10 @@ class Tienda:
         print(f'IVA 19%: {subtotal * 0.19}')
         print(f'TOTAL: {total}')
         return total
+    
+    def imprimir_ventas(self):
+        for venta in self._lista_ventas:
+            print(venta)
 
     def agregar_total(self, total, validar_vendedor):
         validar_vendedor.suma_vendedor += total  
