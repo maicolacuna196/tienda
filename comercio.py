@@ -155,20 +155,36 @@ class Tienda:
         print(tipo_alimento.ljust(len(tipo_alimento) + 20, '*'))
         print('CANT. DESCRIPCIÓN')
         subtotal = 0
-        total = 0
+        
         for venta in self._lista_total:
             total_venta = venta.precio_producto * venta.cantidad_producto
             print(f"{venta.cantidad_producto} {venta.nombre_producto.ljust(len(venta.nombre_producto) + 20, '-')} {total_venta}")
             subtotal += total_venta
-            total = subtotal + (subtotal * 0.19)
-        print(f'SUBTOTAL: {subtotal}')
-        print(f'IVA 19%: {subtotal * 0.19}')
-        print(f'TOTAL: {total}')
+        
+        print(f'SUBTOTAL: ${subtotal}')
+        descuento = self.aplicar_descuento(subtotal)
+        
+        print(f'IVA 19%: ${subtotal * 0.19}')
+        print(f'Descuento: ${descuento}')
+        
+        total = subtotal + (subtotal * 0.19) - descuento
+        print(f'TOTAL: ${total}')
         return total
-    
+
+    def aplicar_descuento(self, subtotal):
+        descuento = 0
+        
+        if subtotal >= 100000:
+            descuento = subtotal * 10 / 100
+        elif subtotal >= 200000:
+            descuento = subtotal * 5 / 100
+        
+        return descuento
+
     def imprimir_ventas(self):
         for venta in self._lista_ventas:
             print(venta)
+
 
     def agregar_total(self, total, validar_vendedor):
         validar_vendedor.suma_vendedor += total  
