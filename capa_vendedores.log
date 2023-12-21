@@ -27895,6 +27895,7 @@ LINE 1: ...umento, nombre_completo, acumulado_ventas) VALUES('MAAIOCL',...
 10:47:03 PM: INFO [comercio.py:75] 
                 ID producto: 41 | Nombre producto: Fecula Maizena De Maiz X 90 G
                 Precio producto: 3500 | Cantidad 39
+<<<<<<< HEAD
 =======
 08:10:34 PM: DEBUG [cursor_pool.py:10] Inicio del mÈtodo with __enter__
 08:10:34 PM: DEBUG [conexion.py:36] ConexiÛn obtenida del pool: <connection object at 0x00000261C95BD360; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
@@ -39215,4 +39216,6 @@ LINE 1: SELECT * FROM venta ORDER BY id_producto
                 Nombre vendedor: Johan Sebastian AcuÒa Muethe | Documento vendedor: 1000522695
                 Total ventas acumuladas: 177770
 >>>>>>> ae53799e7e3491e24404d9f54f9788902b6caeb7
+=======
+>>>>>>> gesti√≥n_inventarios
                 
