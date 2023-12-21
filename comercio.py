@@ -278,7 +278,6 @@ class Tienda:
                 elif operacion == 'X':
                     id_producto = int(input('Ingrese el ID del producto que desea eliminar: '))
                     self.eliminar_producto(id_producto)
-                
                 elif operacion == 'C':
                     self.registrar_vendedor()
                 elif operacion == 'D':
