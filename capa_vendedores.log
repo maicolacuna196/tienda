@@ -39321,3 +39321,8 @@ LINE 1: SELECT * FROM venta ORDER BY id_producto
 09:13:53 AM: DEBUG [cursor_pool.py:22] Commit de la transacción
 09:13:53 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x0000021D5E251140; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
 09:13:53 AM: INFO [comercio.py:66] Productos actualizados: 1
+09:15:25 AM: DEBUG [conexion.py:25] Creación de pool exitosa: <psycopg2.pool.SimpleConnectionPool object at 0x0000012902120310>
+09:15:25 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x00000129006AC9D0; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:15:25 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x00000129006AC9D0; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:15:25 AM: DEBUG [conexion.py:36] Conexión obtenida del pool: <connection object at 0x00000129006AC9D0; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
+09:15:25 AM: DEBUG [conexion.py:42] Regresamos la conexión al pool: <connection object at 0x00000129006AC9D0; dsn: 'user=postgres password=xxx dbname=test_db host=127.0.0.1 port=5432', closed: 0>
