@@ -139,7 +139,7 @@ class Tienda:
                 producto = Producto( cantidad_producto=validar_producto.cantidad_producto,id_producto=validar_producto.id_producto)
                 producto_actualizado = ProductoDAO.actualizar(producto)
                 log.info(f'Producto actualizado: {producto_actualizado}')
-                venta = Venta(validar_producto.id_producto, validar_producto.nombre_producto, validar_producto.precio_producto, cantidad)
+                venta = Venta(id_producto=validar_producto.id_producto, producto_vendido=validar_producto.nombre_producto, valor_producto=validar_producto.precio_producto * cantidad, cantidad_vendida=cantidad)
                 self._lista_actualizada.append(venta)
                 venta_insertada = VentaDAO.insertar(venta)
                 log.info(f'Ventas insertadas {venta_insertada}')
