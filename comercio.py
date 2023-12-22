@@ -3,6 +3,8 @@ from vendedor import Vendedor
 from vendedor_dao import VendedorDAO
 from producto_dao import ProductoDAO
 from logger_base import log
+from venta import Venta
+from ventas_dao import VentaDAO
 
 class Tienda:
     def __init__(self, nombre_negocio, direccion, telefono, sitio_web):
@@ -137,7 +139,10 @@ class Tienda:
                 producto = Producto( cantidad_producto=validar_producto.cantidad_producto,id_producto=validar_producto.id_producto)
                 producto_actualizado = ProductoDAO.actualizar(producto)
                 log.info(f'Producto actualizado: {producto_actualizado}')
-                self._lista_actualizada.append(producto)
+                venta = Venta(validar_producto.id_producto, validar_producto.nombre_producto, validar_producto.precio_producto, cantidad)
+                self._lista_actualizada.append(venta)
+                venta_insertada = VentaDAO.insertar(venta)
+                log.info(f'Ventas insertadas {venta_insertada}')
                 valor_total = cantidad * validar_producto.precio_producto
                 return valor_total
             else:
@@ -146,6 +151,12 @@ class Tienda:
         except ValueError as e:
             print(f'Error: La cantidad debe ser un número entero válido. Sin letras. {e}')
             return 0
+        
+        
+        
+    def imprimir_ventas(self):
+        for venta in self._lista_actualizada:
+            print(venta)
 
     def imprimir_factura(self, validar_vendedor):
         nombre_comercial = self._nombre_negocio.center(len(self._nombre_negocio) + 30, '-')
@@ -181,9 +192,6 @@ class Tienda:
         
         return descuento
 
-    def imprimir_ventas(self):
-        for venta in self._lista_ventas:
-            print(venta)
 
 
     def agregar_total(self, total, validar_vendedor):
