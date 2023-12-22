@@ -152,10 +152,9 @@ class Tienda:
             print(f'Error: La cantidad debe ser un número entero válido. Sin letras. {e}')
             return 0
         
-        
-        
-    def imprimir_ventas(self):
-        for venta in self._lista_actualizada:
+       
+    def imprimir_ventas(self, lista_ventas):
+        for venta in lista_ventas:
             print(venta)
 
     def imprimir_factura(self, validar_vendedor):
@@ -239,15 +238,20 @@ class Tienda:
     def validar_venta(self):
         documento_vendedor = int(input('Ingrese el documento del vendedor a buscar: '))
         validar_vendedor = self.validar_vendedor(documento_vendedor)
+        
         if not validar_vendedor:
             print('El vendedor no se encuentra registrado en la base de datos.')
-        else:
-            nombre_producto = input('Ingrese el nombre del producto a comprar: ')
-            validar_producto = self.validar_producto(nombre_producto)
-            if not validar_producto:
-                print('El producto no se encuentra en el inventario.')
-            else:
-                total_venta = self.registrar_venta(nombre_producto, validar_producto)
+            return
+
+        nombre_producto = input('Ingrese el nombre del producto a comprar: ')
+        validar_producto = self.validar_producto(nombre_producto)
+        
+        if not validar_producto:
+            print('El producto no se encuentra en el inventario.')
+            return
+
+        total_venta = self.registrar_venta(nombre_producto, validar_producto)
+
         while True:
             instrucciones_venta = '''
                                     Ingrese 1 para imprimir la factura de venta
@@ -255,11 +259,13 @@ class Tienda:
                                     Ingrese 3 para finalizar la venta
                                     '''
             operacion_venta = input(instrucciones_venta).strip()
+            
             if operacion_venta == '1':
                 total_venta = self.imprimir_factura(validar_vendedor)
             elif operacion_venta == '2':
                 nombre_producto = input('Ingrese el nombre del producto a comprar:')
                 validar_producto = self.validar_producto(nombre_producto)
+                
                 if not validar_producto:
                     print('El producto no se encuentra en el inventario.')
                 else:
@@ -313,7 +319,8 @@ class Tienda:
                 elif operacion == 'E':
                     self.validar_venta()
                 elif operacion == 'V':
-                    self.imprimir_ventas()
+                    ventas = VentaDAO.seleccionar()
+                    self.imprimir_ventas(ventas)
                 elif operacion == 'Q':
                     break
                 else:
