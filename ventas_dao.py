@@ -16,7 +16,7 @@ class VentaDAO:
             cursor.execute(cls._SELECCIONAR)
             registros = cursor.fetchall()
             for registro in registros:
-                venta = Venta(registro[0], registro[1], registro[2], registro[3], registro[4])
+                venta = Venta(registro[0], registro[1], registro[2], registro[3])
                 VentaDAO._ventas.append(venta)
     
     @classmethod
@@ -28,7 +28,7 @@ class VentaDAO:
     @classmethod
     def insertar(cls, venta):
          with CursorPool() as cursor:
-             valores = (venta.id_producto,venta.nombre_producto, venta.precio_producto, venta.cantidad_producto)
+             valores = (venta.id_producto,venta.producto_vendido, venta.valor_producto, venta.cantidad_vendida)
              cursor.execute(cls._INSERTAR, valores)
              log.debug(f'Venta insertada: {venta}')
              return cursor.rowcount

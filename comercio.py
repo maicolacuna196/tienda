@@ -3,6 +3,8 @@ from vendedor import Vendedor
 from vendedor_dao import VendedorDAO
 from producto_dao import ProductoDAO
 from logger_base import log
+from venta import Venta
+from ventas_dao import VentaDAO
 
 class Tienda:
     def __init__(self, nombre_negocio, direccion, telefono, sitio_web):
@@ -137,7 +139,10 @@ class Tienda:
                 producto = Producto( cantidad_producto=validar_producto.cantidad_producto,id_producto=validar_producto.id_producto)
                 producto_actualizado = ProductoDAO.actualizar(producto)
                 log.info(f'Producto actualizado: {producto_actualizado}')
-                self._lista_actualizada.append(producto)
+                venta = Venta(validar_producto.id_producto, validar_producto.nombre_producto, validar_producto.precio_producto, cantidad)
+                self._lista_actualizada.append(venta)
+                venta_insertada = VentaDAO.insertar(venta)
+                log.info(f'Ventas insertadas {venta_insertada}')
                 valor_total = cantidad * validar_producto.precio_producto
                 return valor_total
             else:
@@ -146,6 +151,11 @@ class Tienda:
         except ValueError as e:
             print(f'Error: La cantidad debe ser un número entero válido. Sin letras. {e}')
             return 0
+        
+       
+    def imprimir_ventas(self, lista_ventas):
+        for venta in lista_ventas:
+            print(venta)
 
     def imprimir_factura(self, validar_vendedor):
         nombre_comercial = self._nombre_negocio.center(len(self._nombre_negocio) + 30, '-')
@@ -155,20 +165,33 @@ class Tienda:
         print(tipo_alimento.ljust(len(tipo_alimento) + 20, '*'))
         print('CANT. DESCRIPCIÓN')
         subtotal = 0
-        total = 0
+        
         for venta in self._lista_total:
             total_venta = venta.precio_producto * venta.cantidad_producto
             print(f"{venta.cantidad_producto} {venta.nombre_producto.ljust(len(venta.nombre_producto) + 20, '-')} {total_venta}")
             subtotal += total_venta
-            total = subtotal + (subtotal * 0.19)
-        print(f'SUBTOTAL: {subtotal}')
-        print(f'IVA 19%: {subtotal * 0.19}')
-        print(f'TOTAL: {total}')
+        
+        print(f'SUBTOTAL: ${subtotal}')
+        descuento = self.aplicar_descuento(subtotal)
+        
+        print(f'IVA 19%: ${subtotal * 0.19}')
+        print(f'Descuento: ${descuento}')
+        
+        total = subtotal + (subtotal * 0.19) - descuento
+        print(f'TOTAL: ${total}')
         return total
-    
-    def imprimir_ventas(self):
-        for venta in self._lista_ventas:
-            print(venta)
+
+    def aplicar_descuento(self, subtotal):
+        descuento = 0
+        
+        if subtotal >= 100000:
+            descuento = subtotal * 5 / 100
+        elif subtotal >= 200000:
+            descuento = subtotal * 10 / 100
+        
+        return descuento
+
+
 
     def agregar_total(self, total, validar_vendedor):
         validar_vendedor.suma_vendedor += total  
@@ -215,15 +238,20 @@ class Tienda:
     def validar_venta(self):
         documento_vendedor = int(input('Ingrese el documento del vendedor a buscar: '))
         validar_vendedor = self.validar_vendedor(documento_vendedor)
+        
         if not validar_vendedor:
             print('El vendedor no se encuentra registrado en la base de datos.')
-        else:
-            nombre_producto = input('Ingrese el nombre del producto a comprar: ')
-            validar_producto = self.validar_producto(nombre_producto)
-            if not validar_producto:
-                print('El producto no se encuentra en el inventario.')
-            else:
-                total_venta = self.registrar_venta(nombre_producto, validar_producto)
+            return
+
+        nombre_producto = input('Ingrese el nombre del producto a comprar: ')
+        validar_producto = self.validar_producto(nombre_producto)
+        
+        if not validar_producto:
+            print('El producto no se encuentra en el inventario.')
+            return
+
+        total_venta = self.registrar_venta(nombre_producto, validar_producto)
+
         while True:
             instrucciones_venta = '''
                                     Ingrese 1 para imprimir la factura de venta
@@ -231,11 +259,13 @@ class Tienda:
                                     Ingrese 3 para finalizar la venta
                                     '''
             operacion_venta = input(instrucciones_venta).strip()
+            
             if operacion_venta == '1':
                 total_venta = self.imprimir_factura(validar_vendedor)
             elif operacion_venta == '2':
                 nombre_producto = input('Ingrese el nombre del producto a comprar:')
                 validar_producto = self.validar_producto(nombre_producto)
+                
                 if not validar_producto:
                     print('El producto no se encuentra en el inventario.')
                 else:
@@ -289,7 +319,8 @@ class Tienda:
                 elif operacion == 'E':
                     self.validar_venta()
                 elif operacion == 'V':
-                    self.imprimir_ventas()
+                    ventas = VentaDAO.seleccionar()
+                    self.imprimir_ventas(ventas)
                 elif operacion == 'Q':
                     break
                 else:
