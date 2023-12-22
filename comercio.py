@@ -175,9 +175,9 @@ class Tienda:
         descuento = 0
         
         if subtotal >= 100000:
-            descuento = subtotal * 10 / 100
-        elif subtotal >= 200000:
             descuento = subtotal * 5 / 100
+        elif subtotal >= 200000:
+            descuento = subtotal * 10 / 100
         
         return descuento
 
